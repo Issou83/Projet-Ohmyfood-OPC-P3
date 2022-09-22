@@ -8,5 +8,8 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-size: 500px;
+  font-size: 50px;
+}
+footer {
+    font-family: 'Shrikhand';
 }
