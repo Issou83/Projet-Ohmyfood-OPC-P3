@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
 }
 h3, p {
-    font-size: 17px;
+    font-size: 16px;
     margin: 0;
 }
 a {
@@ -34,15 +34,15 @@ header figure {
     justify-content: center;
     margin: 0px 0 0 0;
     width: 100%;
-    box-shadow: 0px 2px 10px #cecece;
-    padding-bottom: 12px;
-    padding-top: 24px;
+    box-shadow: 30px 0px 30px black;
+    padding-bottom: 13px;
+    padding-top: 23px;
 }
 header img {
     width: 164px;
 }
 .fa-location-dot {
-
+    font-size: 15px;
     padding: 5px 5px 5px 5px;
 }
 .location {
@@ -53,6 +53,7 @@ header img {
     margin: 0px;
     background-color: #eaeaea;
 }
+
 /*Section Explor*/
 .secExplor {
     display: flex;
@@ -63,14 +64,17 @@ header img {
     background-color: #f6f6f6;
 }
 .secExplor h1 { 
-    width: 61.86%;
+    width: 62.5%;
     display: flex;
     text-align: center;
     justify-content: center;
-    font-size: 22px;
-    margin: 43px auto 16px;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 40px auto 16px auto;
 }
 .secExplor p { 
+    font-size: 17px;
+    font-weight: 300;
     width: 81.60%;
     display: flex;
     text-align: center;
@@ -79,57 +83,88 @@ header img {
 }
 .secExplor a {
     font-size: 16px;
+    font-weight: 500;
+    color: white;
 }
 .secExplor .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 31px auto 57px auto;
-    border: solid 3px black;
+    margin: 32px auto 57px auto;
     width: 218px;
     height: 50px;
     border-radius: 25px;
+    border:  1px transparent;
+    background: linear-gradient(176deg,#FF79DA, #9356DC 78px);
 }
 
 /**Section: Fonctionnemment**/
-.secFonction .box {
+.box {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 54px;
 }
 .fa-mobile-screen-button,
 .fa-list-ul,
 .fa-store {
+    position: absolute;
     font-size: 18px;
-    padding: 23px;
+    margin: auto;
+    padding: 30px 80.5% 30px 7%;
 }
-.secFonction a {
-    width: 100%;
+.fa-mobile-screen-button:hover,
+.fa-list-ul:hover,
+.fa-store:hover {
+    color: #9356dc;
 }
-.box {
+.box a {
+    display: flex;
     align-items: center;
+    width: 89.33%;
+    height: 74px;
+    margin: 12px auto;
 }
+.name_btn {
+    padding: 0px 0px 0px 16.53%;
+}
+.secFonction p {
+    font-size: 16px;
+    font-weight: 600;
+}
+.secFonction h2 {
+
+    font-size: 24px;
+    margin: 48px 0px 20px 5.33%;
+}
+
 .box button {
     position: relative;
     display: flex;
     align-items: center;
-    margin: 12px auto;
-    border: solid 3px transparent;
-    width: 89.33%;
+    margin: 12px 0px 12px 12px;
+    padding: 0;
+    color: black;
+    border: transparent;
+    width: 100%;
     height: 74px;
-    background-color: #f5edff;
+    background-color: #f6f6f6;
     border-radius: 18px;
-    box-shadow: 2px 5px 8px grey;
+    box-shadow: 0px 2px 10px rgb(206, 206, 206);
 }
-.box button :hover {
+.box button:hover {
+    box-shadow: 10px 10px 10px grey;
     background-color: #f5edff;
 }
+
 button i{
     color: #7e7e7e;
 }
-.num1, .num2, .num3 {
+p.num1, p.num2, p.num3 {
+    font-weight: 100;
     position: absolute;
-    left: -14px;
+    left: -12px;
     height: 24px;
     width: 24px;
     font-size: 16px;
@@ -147,7 +182,7 @@ button i{
     height: 251px;
     background-color: unset;
     border-radius: 20px;
-    margin: 9px 5.33% 9px 5.33%;
+    margin: 0px 5.33% 18px 5.33%;
     background-color: white;
     box-shadow: 0px 10px 10px #e9e9e9;
 }
@@ -158,10 +193,7 @@ button i{
     background-position: 4px 10px;
     border-radius: 10px 10px 0px 0px;
 }
-h2 {
-    size: 2px;
-    margin: 5.33%;
-}
+
 h3 {
     margin: 16px 0 0 14px;
 }
@@ -172,8 +204,15 @@ h3 {
 background-color: #f6f6f6;
 width: 100%;
 }
+.secCards h2 {
+    font-size: 24px;
+    padding: 60px 0 24px 5.33%;
+    margin-top: unset;
+    margin-bottom: unset;
+}
 .secCards a {
-    margin: 9px 5.33% 9px 5.33%;
+    height: 335px;
+    width: 100%;
 }
 footer {
     font-family: 'Shrikhand';
