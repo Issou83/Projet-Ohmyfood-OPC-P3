@@ -113,13 +113,16 @@ header img {
     position: relative;
     display: flex;
     align-items: center;
-    margin: 31px auto 57px auto;
+    margin: 12px auto;
     border: solid 3px transparent;
     width: 89.33%;
     height: 74px;
-    background-color: white;
+    background-color: #f5edff;
     border-radius: 18px;
     box-shadow: 2px 5px 8px grey;
+}
+.box button :hover {
+    background-color: #f5edff;
 }
 button i{
     color: #7e7e7e;
