@@ -112,7 +112,11 @@ header img {
     position: absolute;
     font-size: 18px;
     margin: auto;
-    padding: 30px 80.5% 30px 7%;
+    padding: 30px 89.30% 30px 7.5%;
+    width: 20px;
+}
+.fa-mobile-screen-button {
+padding-left: 8.1%;
 }
 .fa-mobile-screen-button:hover,
 .fa-list-ul:hover,
