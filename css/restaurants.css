@@ -1,0 +1,110 @@
+/*Régles générals , appliquées sur toute la pages*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px; 
+  max-width: 100%;
+  margin: 0 auto;
+}
+h3, p {
+    font-size: 16px;
+    margin: 0;
+}
+a {
+text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+/*Le header et position du logo*/
+header {
+    display: block;
+    position: relative;
+}
+
+header figure {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0 0 0;
+    width: 100%;
+    padding-bottom: 13px;
+    padding-top: 23px;
+}
+.fa-arrow-left {
+    font-size: 25px;
+    position: absolute;
+    bottom: 15px;
+    left: 22px;
+}
+.linkPages {
+width: 50px;
+height: 50px;
+}
+header img {
+    width: 164px; 
+
+}
+/**main**/
+main {
+    position: relative;
+}
+
+ main figure {
+    margin: 0;
+ }
+.imgResto img {
+    width: 100%;
+    margin-bottom: 600px;
+}
+main .menu {
+    position: absolute;
+    bottom: 490px;
+    border-radius: 15px 15px 0 0;
+}
+/**Footer et ses liens**/
+footer {
+    font-family: 'Shrikhand';
+    background-color: #353535;
+}
+footer p, footer i, footer h1 {
+    color: white;
+    font-size: 16px;
+
+}
+footer a {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+footer h1 {
+    font-size: 18px;
+    font-weight: unset;
+    padding: 22px 0px 5px 24px;
+    margin: 0;
+    font-weight: lighter;
+}
+footer p {
+    font-weight: 400;
+}
+footer ul {
+    list-style-type: none;
+    padding-bottom: 26px;
+    padding-left: 24px;
+    font-family: 'Roboto';
+    margin: 16px 0 0px 0px;
+
+}
+footer i {
+    font-size: 11px;
+    padding: 5px 11px 0px 0px;
+}
+.fa-utensils {
+    font-size: 11px;
+    padding: 5px 13px 0px 2px;
+}

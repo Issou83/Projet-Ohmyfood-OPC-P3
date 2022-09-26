@@ -214,17 +214,45 @@ width: 100%;
     height: 335px;
     width: 100%;
 }
+
+/**Footer et ses liens**/
 footer {
     font-family: 'Shrikhand';
     background-color: #353535;
 }
-/**Footer et ses liens**/
 footer p, footer i, footer h1 {
     color: white;
+    font-size: 16px;
+
 }
 footer a {
     display: flex;
+    margin-bottom: 8px;
 }
-ul {
+
+footer h1 {
+    font-size: 18px;
+    font-weight: unset;
+    padding: 22px 0px 5px 24px;
+    margin: 0;
+    font-weight: lighter;
+}
+footer p {
+    font-weight: 400;
+}
+footer ul {
     list-style-type: none;
+    padding-bottom: 26px;
+    padding-left: 24px;
+    font-family: 'Roboto';
+    margin: 16px 0 0px 0px;
+
+}
+footer i {
+    font-size: 11px;
+    padding: 5px 11px 0px 0px;
+}
+.fa-utensils {
+    font-size: 11px;
+    padding: 5px 13px 0px 2px;
 }
