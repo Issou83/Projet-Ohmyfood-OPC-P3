@@ -12,7 +12,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
-h3,
 p {
   font-size: 16px;
   margin: 0;
@@ -42,59 +41,108 @@ header figure {
   padding-top: 23px;
 }
 .fa-arrow-left {
-  font-size: 25px;
+  font-size: 20px;
   position: absolute;
-  bottom: 15px;
-  left: 22px;
+  bottom: 20px;
+  left: 24px;
 }
 header img {
   width: 164px;
 }
 /**main**/
 
-main figure {
+.imgResto {
   margin: 0;
 }
 .imgResto img {
   position: absolute;
-  top: 63px;
+  top: 66px;
   width: 100%;
-  height: 258px;
+  height: 260px;
   z-index: 1;
 }
 .menu {
   position: absolute;
-  top: 300px;
+  top: 284px;
   width: 100%;
   background-color: #f6f6f6;
-  border-radius: 38px 38px 0 0;
+  border-radius: 40px 40px 0 0;
   z-index: 2;
 }
-.menu h2 {
+.menu .menu-title {
   margin-left: 4.8%;
   font-size: 30px;
   font-weight: 500;
   font-family: "Shrikhand";
 }
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .card {
+  display: flex;
+  justify-content: space-between;
+
   width: 93.06%;
+  height: 68px;
   background-color: white;
-  margin: 0px 10px 16px 2.93%;
+  margin-bottom: 16px;
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
 }
-.menu h3 {
-  font-size: 18px;
+.card-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.price-valid {
+  display: flex;
+  align-items: flex-end;
+}
+.card-price {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0px 23px 12px 0px;
+}
+.price-valid i {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 60px;
+  color: white;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+}
+.menu .box-title {
+  display: flex;
+
+  font-size: 16px;
   padding-bottom: 5px;
   margin-left: 4.8%;
   margin-bottom: 15px;
   border-bottom: solid #99e2d0;
   width: 40px;
 }
-.card h4,
-.card p {
-  margin-left: 2.93%;
-  margin: 0 0 0 2.93%;
+.card-title,
+.card-text p {
+  margin: 0px 0px 0px 2.93%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card-title {
+  display: inline-block;
+  height: 24px;
+  font-size: 17px;
+}
+.card-title p {
+  font-size: 18px;
 }
 .btn {
   display: flex;
