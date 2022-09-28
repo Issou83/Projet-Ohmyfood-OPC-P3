@@ -80,7 +80,7 @@ header img {
   flex-direction: column;
   align-items: center;
 }
-.card {
+.box .card {
   display: flex;
   justify-content: space-between;
 
@@ -92,7 +92,7 @@ header img {
   border-radius: 15px;
 }
 .card-text {
-  width: 100%;
+  max-width: 66.66%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -137,7 +137,6 @@ header img {
   overflow: hidden;
 }
 .card-title {
-  display: inline-block;
   height: 24px;
   font-size: 17px;
 }
