@@ -1,53 +1,51 @@
-//Couleurs princpales du site
-$prColor: #9356DC;
-$secColor: #FF79DA;
-$terColor: #99E2D0;
-$grad: linear-gradient(176deg, #ff79da, #9356dc 78px);
-//Dégradé de couleurs
-@mixin centerX {
-    display: flex;
-    justify-content: center;
+@-webkit-keyframes checkslide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@mixin centerXY {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@keyframes checkslide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@mixin gradRound($grad) {
-    background: $grad;
-    border-radius: 25px;
-}
-//Régles générals , appliquées sur toute la pages
-
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   max-width: 100%;
   margin: 0 auto;
 }
+
 p {
   font-size: 16px;
   margin: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 a:visited {
   color: black;
 }
-img {
-  object-fit: cover;
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
   background-size: cover;
 }
-//Le header et position du logo
+
 header {
   display: block;
   position: relative;
@@ -55,25 +53,29 @@ header {
 }
 
 header figure {
-    @include centerX;
+  display: flex;
+  justify-content: center;
   margin: 0px 0 0 0;
   width: 100%;
   padding-bottom: 13px;
   padding-top: 23px;
 }
+
 .fa-arrow-left {
   font-size: 20px;
   position: absolute;
   bottom: 20px;
   left: 24px;
 }
+
 header img {
   width: 164px;
 }
-//main
+
 .imgResto {
   margin: 0;
 }
+
 .imgResto img {
   position: absolute;
   top: 66px;
@@ -81,6 +83,7 @@ header img {
   height: 260px;
   z-index: 1;
 }
+
 .menu {
   position: absolute;
   top: 284px;
@@ -89,12 +92,14 @@ header img {
   border-radius: 40px 40px 0 0;
   z-index: 2;
 }
+
 .menu .menu-title {
   margin-left: 4.8%;
   font-size: 30px;
   font-weight: 500;
   font-family: "Shrikhand";
 }
+
 .card {
   display: flex;
   justify-content: space-between;
@@ -105,8 +110,8 @@ header img {
   margin-bottom: 16px;
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
+}
 
-} 
 .card-text {
   max-width: 66.66%;
   min-width: 60%;
@@ -114,10 +119,12 @@ header img {
   flex-direction: column;
   justify-content: center;
 }
+
 .price-valid {
   display: flex;
   align-items: flex-end;
 }
+
 .card-price {
   display: flex;
   justify-content: flex-end;
@@ -125,15 +132,19 @@ header img {
   font-weight: 700;
   padding: 0px 23px 12px 0px;
 }
+
 .fa-circle-check {
   font-size: 20px;
-  @include centerXY;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 60px;
   color: white;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
 }
+
 .menu .box-title {
   font-size: 16px;
   padding-bottom: 5px;
@@ -142,6 +153,7 @@ header img {
   border-bottom: solid #99e2d0;
   width: 40px;
 }
+
 .card-title,
 .card-text p {
   margin: 0px 0px 0px 2.93%;
@@ -149,38 +161,39 @@ header img {
   white-space: nowrap;
   overflow: hidden;
 }
+
 .card-title {
   font-size: 17px;
 }
+
 .btn {
-  @include centerXY;
-  @include gradRound($grad);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(176deg, #ff79da, #9356dc 78px);
+  border-radius: 25px;
   margin: 50px auto 57px auto;
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: transform 1s ;
-  &:hover {
-   opacity: (0.8);
-   box-shadow: 0px 0px 20px grey;
-   transform: scale(1.1);
-  }
 }
-.command {
-  color: white;
+.btn:hover {
+  transform: scale(1.4);
 }
-//Footer et ses liens
+
 footer {
   position: absolute;
   font-family: "Shrikhand";
   background-color: #353535;
 }
+
 footer p,
 footer i,
 footer h1 {
   color: white;
   font-size: 16px;
 }
+
 footer a {
   display: flex;
   margin-bottom: 8px;
@@ -193,9 +206,11 @@ footer h1 {
   margin: 0;
   font-weight: lighter;
 }
+
 footer p {
   font-weight: 400;
 }
+
 footer ul {
   list-style-type: none;
   padding-bottom: 26px;
@@ -203,11 +218,13 @@ footer ul {
   font-family: "Roboto";
   margin: 16px 0 0px 0px;
 }
+
 footer i {
   font-size: 11px;
   padding: 5px 11px 0px 0px;
 }
+
 .fa-utensils {
   font-size: 11px;
   padding: 5px 13px 0px 2px;
-}
+}/*# sourceMappingURL=restaurants.css.map */

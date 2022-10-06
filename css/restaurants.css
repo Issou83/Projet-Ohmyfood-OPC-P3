@@ -1,3 +1,11 @@
+@keyframes checkslide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 *,
 *:before,
 *:after {
@@ -28,6 +36,7 @@ a:visited {
 
 img {
   object-fit: cover;
+  background-size: cover;
 }
 
 header {
@@ -95,9 +104,6 @@ header img {
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
 }
-.card:hover + .fa-circle-check > .fa-circle-check__bar {
-  transform: scaleX(1);
-}
 
 .card-text {
   max-width: 66.66%;
@@ -131,11 +137,6 @@ header img {
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
 }
-.fa-circle-check__bar {
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 4000ms;
-}
 
 .menu .box-title {
   font-size: 16px;
@@ -162,20 +163,26 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(176deg, #ff79da, #9356dc 78px);
+  border-radius: 25px;
   margin: 50px auto 57px auto;
   width: 49.6%;
   height: 50px;
   border: unset;
-  background: linear-gradient(176deg, #ff79da, #9356dc 78px);
-  border-radius: 25px;
+  transition: transform 1s;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 20px grey;
+  transform: scale(1.1);
 }
 
-.btn a {
+.command {
   color: white;
-  font-size: 16px;
 }
 
 footer {
+  position: absolute;
   font-family: "Shrikhand";
   background-color: #353535;
 }
