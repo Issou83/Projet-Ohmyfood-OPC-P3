@@ -17,6 +17,38 @@ $grad: linear-gradient(176deg, #ff79da, #9356dc 78px);
     background: $grad;
     border-radius: 25px;
 }
+//Animation check sur les cards de menu
+@keyframes slidein {
+  0% {
+    transform: translateX(100%);
+
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes box-animation {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+$anim1: 1s 200ms;
+$anim2: 1s 400ms;
+$anim3: 1s 600ms;
+$anim4: 1s 800ms;
 //Régles générals , appliquées sur toute la pages
 
 *,
@@ -94,7 +126,8 @@ header img {
   font-size: 30px;
   font-weight: 500;
   font-family: "Shrikhand";
-}
+} 
+
 .card {
   display: flex;
   justify-content: space-between;
@@ -105,8 +138,33 @@ header img {
   margin-bottom: 16px;
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
-
-} 
+  cursor: pointer;
+  overflow: hidden;
+  animation: box-animation;
+  &1 {
+    animation: box-animation $anim1;
+    animation-fill-mode: both;
+  }
+  &2 {
+    animation: box-animation $anim2;
+    animation-fill-mode: both;
+  }
+  &3 {
+    animation: box-animation $anim3;
+    animation-fill-mode: both;
+  }
+  &4 {
+    animation: box-animation $anim4;
+    animation-fill-mode: both;
+  }
+  &:hover {
+    & + .fa-circle-check {
+      & >.fa-circle-check_slidein {
+        animation: slidein 4s;
+      }
+    }
+  }
+}
 .card-text {
   max-width: 66.66%;
   min-width: 60%;
@@ -125,7 +183,7 @@ header img {
   font-weight: 700;
   padding: 0px 23px 12px 0px;
 }
-.fa-circle-check {
+ .fa-circle-check {
   font-size: 20px;
   @include centerXY;
   height: 100%;
@@ -133,6 +191,18 @@ header img {
   color: white;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
+  overflow: hidden;
+  &__slidein {
+  animation: both;
+  animation: slidein 1s;
+  ::before {
+    animation: rotate 5s;
+  }
+  }
+
+}
+.check {
+  height: 100%;
 }
 .menu .box-title {
   font-size: 16px;
@@ -159,7 +229,8 @@ header img {
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: transform 1s ;
+  transition: transform 0.5s ;
+  box-shadow: 0px 0px 10px grey;
   &:hover {
    opacity: (0.8);
    box-shadow: 0px 0px 20px grey;

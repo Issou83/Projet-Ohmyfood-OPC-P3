@@ -43,7 +43,7 @@ a:visited, a, p, h1, h2, h3 {
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 999;
+  z-index: 3;
   border: 16px solid transparent;
   width: 150px;
   height: 150px;
@@ -163,6 +163,7 @@ header img {
   transition: transform 0.5s;
   background: linear-gradient(176deg, #ff79da, #9356dc 78px);
   border-radius: 25px;
+  box-shadow: 0px 0px 10px grey;
 }
 
 .btn:hover {
