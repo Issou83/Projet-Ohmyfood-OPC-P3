@@ -24,6 +24,16 @@
     opacity: 1;
   }
 }
+@keyframes heart-full {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 *,
 *:before,
 *:after {
@@ -111,8 +121,52 @@ header img {
   font-family: "Shrikhand";
 }
 
-.card {
+.title-like {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4.8%;
+}
+
+.heart-anim {
+  font-size: 40px;
+}
+.heart-anim:hover .heartfull {
+  height: 100%;
+}
+
+.heart-anim {
+  position: relative;
+  right: 20px;
+  display: flex;
+  font-size: 25px;
+  width: 25px;
+}
+
+.heartempt {
+  position: relative;
+  right: 20px;
+  display: flex;
+  font-size: 25px;
+  width: 25px;
+}
+
+.heartfull {
+  position: absolute;
+  font-size: 25px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.card {
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 93.06%;
   height: 68px;
@@ -122,27 +176,25 @@ header img {
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
   cursor: pointer;
-  overflow: hidden;
-  animation: box-animation;
 }
-.card1 {
+.card__delay1 {
   animation: box-animation 1s 200ms;
   animation-fill-mode: both;
 }
-.card2 {
+.card__delay2 {
   animation: box-animation 1s 400ms;
   animation-fill-mode: both;
 }
-.card3 {
+.card__delay3 {
   animation: box-animation 1s 600ms;
   animation-fill-mode: both;
 }
-.card4 {
+.card__delay4 {
   animation: box-animation 1s 800ms;
   animation-fill-mode: both;
 }
-.card:hover + .fa-circle-check > .fa-circle-check_slidein {
-  animation: slidein 4s;
+.card:hover + .heartempty > .heartfull {
+  height: 100%;
 }
 
 .card-text {
@@ -158,9 +210,7 @@ header img {
   align-items: flex-end;
 }
 
-.card-price {
-  display: flex;
-  justify-content: flex-end;
+.price .card-price {
   font-size: 14px;
   font-weight: 700;
   padding: 0px 23px 12px 0px;
@@ -179,15 +229,14 @@ header img {
   overflow: hidden;
 }
 .fa-circle-check__slidein {
-  animation: both;
-  animation: slidein 1s;
-}
-.fa-circle-check__slidein ::before {
-  animation: rotate 5s;
+  animation-fill-mode: both;
+  transform: translateX(5s);
 }
 
 .check {
   height: 100%;
+  margin-right: -60px;
+  overflow: hidden;
 }
 
 .menu .box-title {

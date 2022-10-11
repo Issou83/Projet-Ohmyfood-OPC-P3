@@ -3,7 +3,14 @@ $prColor: #9356DC;
 $secColor: #FF79DA;
 $terColor: #99E2D0;
 $grad: linear-gradient(176deg, #ff79da, #9356dc 78px);
+$anim1: 1s 200ms;
+$anim2: 1s 400ms;
+$anim3: 1s 600ms;
+$anim4: 1s 800ms;
 //Dégradé de couleurs
+@mixin grad {
+  background-color: linear-gradient(176deg, #ff79da, #9356dc 78px);
+}
 @mixin centerX {
     display: flex;
     justify-content: center;
@@ -45,10 +52,16 @@ $grad: linear-gradient(176deg, #ff79da, #9356dc 78px);
     opacity: 1;
   }
 }
-$anim1: 1s 200ms;
-$anim2: 1s 400ms;
-$anim3: 1s 600ms;
-$anim4: 1s 800ms;
+@keyframes heart-full {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 //Régles générals , appliquées sur toute la pages
 
 *,
@@ -87,7 +100,7 @@ header {
 }
 
 header figure {
-    @include centerX;
+  @include centerX;
   margin: 0px 0 0 0;
   width: 100%;
   padding-bottom: 13px;
@@ -127,9 +140,48 @@ header img {
   font-weight: 500;
   font-family: "Shrikhand";
 } 
-
-.card {
+.title-like {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4.8%;
+}
+.heart-anim {
+  font-size: 40px;
+  &:hover .heartfull {
+    height: 100%;
+}
+}
+.heart-anim {
+  position: relative;
+  right: 20px;
+  display: flex;
+  font-size: 25px;
+  width: 25px;
+}
+.heartempt {
+  position: relative;
+  right: 20px;
+  display: flex;
+  font-size: 25px;
+  width: 25px;
+}
+.heartfull {
+    position: absolute;
+    font-size: 25px;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 3s;
+
+}
+.card {
+  word-wrap: break-word; 
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 93.06%;
   height: 68px;
@@ -139,32 +191,31 @@ header img {
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
   cursor: pointer;
-  overflow: hidden;
-  animation: box-animation;
-  &1 {
+  &__delay1 {
     animation: box-animation $anim1;
     animation-fill-mode: both;
   }
-  &2 {
+  &__delay2 {
     animation: box-animation $anim2;
     animation-fill-mode: both;
   }
-  &3 {
+  &__delay3 {
     animation: box-animation $anim3;
     animation-fill-mode: both;
   }
-  &4 {
+  &__delay4 {
     animation: box-animation $anim4;
     animation-fill-mode: both;
   }
   &:hover {
-    & + .fa-circle-check {
-      & >.fa-circle-check_slidein {
-        animation: slidein 4s;
+    & + .heartempty {
+      & > .heartfull {
+        height: 100%;
       }
     }
   }
 }
+
 .card-text {
   max-width: 66.66%;
   min-width: 60%;
@@ -176,9 +227,7 @@ header img {
   display: flex;
   align-items: flex-end;
 }
-.card-price {
-  display: flex;
-  justify-content: flex-end;
+.price .card-price {
   font-size: 14px;
   font-weight: 700;
   padding: 0px 23px 12px 0px;
@@ -193,16 +242,14 @@ header img {
   border-radius: 0 15px 15px 0;
   overflow: hidden;
   &__slidein {
-  animation: both;
-  animation: slidein 1s;
-  ::before {
-    animation: rotate 5s;
+    animation-fill-mode: both;
+    transform: translateX(5s);
   }
-  }
-
 }
 .check {
   height: 100%;
+  margin-right: -60px;
+  overflow: hidden;
 }
 .menu .box-title {
   font-size: 16px;

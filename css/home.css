@@ -44,7 +44,7 @@ a:visited, a, p, h1, h2, h3 {
   right: 0;
   margin: auto;
   z-index: 3;
-  border: 16px solid transparent;
+  border: 16px ridge transparent;
   width: 150px;
   height: 150px;
   border-radius: 50%;
