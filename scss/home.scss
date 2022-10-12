@@ -8,6 +8,11 @@ $grad: linear-gradient(176deg, #ff79da, #9356dc 78px);
     background: $grad;
     border-radius: 25px;
 }
+@mixin centerXY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*Régles générals , appliquées sur toute la pages*/
 *,
 *:before,
@@ -37,7 +42,6 @@ a:visited, a, p, h1, h2, h3 {
 .load {
     width: 100%;
     height: 100%;
-    background-color: #353535;
 }
 .loader {
     position: fixed;
@@ -46,12 +50,12 @@ a:visited, a, p, h1, h2, h3 {
     left: 0;
     right: 0;
     margin: auto;
-    z-index: 3;
+    z-index: -1;
     border: 16px ridge transparent;
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    animation: chargeur 3s linear;
+    animation: chargeur 2s ease-in-out;
   }
   @keyframes chargeur {
     0%{
@@ -60,8 +64,9 @@ a:visited, a, p, h1, h2, h3 {
       border-bottom-color: $prColor;
       border-left-color: $terColor;
       border-right-color: $terColor;
+      z-index: 3;
     }
-    33%{
+    33% {
         transform: rotate(360deg) scale(0.9);
       border-top-color: $secColor;
       border-bottom-color: $secColor;
@@ -69,20 +74,20 @@ a:visited, a, p, h1, h2, h3 {
       border-right-color: $prColor;
     }
     66% {
-       transform: rotate(360deg) scale(1.1);
+       transform: rotate(1080deg) scale(1.1);
       border-top-color: $terColor;
       border-bottom-color: $terColor;
       border-left-color: $secColor;
       border-right-color: $secColor;
     }
     100%{
-       transform: rotate(720deg) scale(1);
+       transform: rotate(2140deg) scale(1);
       border-top-color: $prColor;
       border-bottom-color: $prColor;
       border-left-color: $terColor;
       border-right-color: $terColor;
+      z-index: 3;
     }
-    
   }
 /*Le header et position du logo*/
 header {
@@ -141,7 +146,7 @@ header img {
     justify-content: center;
     margin:  0px auto 0px;
 }
-.secExplor a {
+.btn-text {
     font-size: 16px;
     font-weight: 500;
     color: white;
@@ -155,9 +160,11 @@ header img {
     height: 50px;
     border-radius: 25px;
     border:  1px transparent;
-    transition: transform 0.5s ;
+    transition: transform 0.250s ease-in-out;
     @include gradRound($grad);
+    opacity: 1;
     box-shadow: 0px 0px 10px grey;
+    cursor: pointer;
 }
 .btn:hover {
     opacity: (0.8);
@@ -232,12 +239,13 @@ button i{
 p.num1, p.num2, p.num3 {
     font-weight: 100;
     position: absolute;
+    @include centerXY;
     left: -12px;
     height: 24px;
     width: 24px;
     font-size: 16px;
     color: white;
-    border-radius: 60px;
+    border-radius: 50%;
     background-color: #9356dc;
 }
 .num2, .num3 {

@@ -128,39 +128,30 @@ header img {
   margin-right: 4.8%;
 }
 
-.heart-anim {
-  font-size: 40px;
-}
-.heart-anim:hover .heartfull {
-  height: 100%;
-}
-
-.heart-anim {
+.heart {
   position: relative;
-  right: 20px;
   display: flex;
   font-size: 25px;
   width: 25px;
+  cursor: pointer;
 }
-
-.heartempt {
-  position: relative;
-  right: 20px;
-  display: flex;
-  font-size: 25px;
+.heart:hover {
+  border-color: white;
+}
+.heart:hover.heart-full {
   width: 25px;
 }
-
-.heartfull {
+.heart-full {
   position: absolute;
-  font-size: 25px;
+  top: 34px;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   z-index: 2;
-  opacity: 0;
-  transition: opacity 3s;
+  transition: all ease-in-out 0.75s;
+  width: 0px;
+  box-shadow: 10px #353535;
 }
 
 .card {
@@ -198,12 +189,11 @@ header img {
   margin-right: 0;
 }
 .card:hover .fa-circle-check {
-  transition: rotate(0);
+  transform: rotate(-360deg);
 }
 
 .card-text {
   min-width: 72.95%;
-  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,12 +217,18 @@ header img {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 60px;
+  width: 100%;
   color: white;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.check {
+  overflow: hidden;
+  height: 100%;
+  width: 60px;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
-  overflow: hidden;
-  transition: rotate(360deg) 3s;
 }
 
 .check {
