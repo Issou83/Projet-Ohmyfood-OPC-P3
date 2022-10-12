@@ -176,6 +176,7 @@ header img {
   box-shadow: 0px 5px 10px #dedddd;
   border-radius: 15px;
   cursor: pointer;
+  overflow: hidden;
 }
 .card__delay1 {
   animation: box-animation 1s 200ms;
@@ -193,27 +194,31 @@ header img {
   animation: box-animation 1s 800ms;
   animation-fill-mode: both;
 }
-.card:hover + .heartempty > .heartfull {
-  height: 100%;
+.card:hover .check {
+  margin-right: 0;
+}
+.card:hover .fa-circle-check {
+  transition: rotate(0);
 }
 
 .card-text {
-  max-width: 66.66%;
-  min-width: 60%;
+  min-width: 72.95%;
+  border: solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.price-valid {
+.card-valid {
   display: flex;
   align-items: flex-end;
 }
 
-.price .card-price {
+.price {
+  height: 30px;
   font-size: 14px;
   font-weight: 700;
-  padding: 0px 23px 12px 0px;
+  margin: 0px 12px 0px 0px;
 }
 
 .fa-circle-check {
@@ -227,16 +232,13 @@ header img {
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   overflow: hidden;
-}
-.fa-circle-check__slidein {
-  animation-fill-mode: both;
-  transform: translateX(5s);
+  transition: rotate(360deg) 3s;
 }
 
 .check {
   height: 100%;
   margin-right: -60px;
-  overflow: hidden;
+  transition: margin-right 1s;
 }
 
 .menu .box-title {
