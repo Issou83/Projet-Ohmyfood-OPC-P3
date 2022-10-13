@@ -154,10 +154,12 @@ header img {
   font-size: 25px;
   width: 25px;
   cursor: pointer;
-  &:hover {
-    border-color: white;
+
+  &:active {
+
     &.heart-full {
     width: 25px;
+    text-shadow: 5px 5px 5px #353535;
     }
   }
   &-full {
@@ -185,10 +187,12 @@ header img {
   background-color: white;
   margin-left: 3.47%;
   margin-bottom: 16px;
-  box-shadow: 0px 5px 10px #dedddd;
+  box-shadow: 0px 5px 10px #bdbdbd;
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
+  opacity: (0);
+  transition: all 1s;
   &__delay1 {
     animation: box-animation $anim1;
     animation-fill-mode: both;
@@ -206,11 +210,13 @@ header img {
     animation-fill-mode: both;
   }
   &:hover {
+opacity: (1);
+transform: all 2s;
       & .check {
         margin-right: 0;  
       }
       & .fa-circle-check {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
       }
     }
   }
@@ -278,12 +284,14 @@ header img {
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: transform 0.5s ;
+  transition: all 400ms ease-in;
   box-shadow: 0px 0px 10px grey;
+  opacity: (1);
   &:hover {
    opacity: (0.8);
    box-shadow: 0px 0px 20px grey;
    transform: scale(1.1);
+   transition: all 400ms ease-out;
   }
 }
 .command {

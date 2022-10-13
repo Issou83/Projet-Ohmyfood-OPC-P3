@@ -174,7 +174,7 @@ header img {
   height: 50px;
   border-radius: 25px;
   border: 1px transparent;
-  transition: transform 0.25s ease-in-out;
+  transition: all 400ms ease-in;
   background: linear-gradient(176deg, #ff79da, #9356dc 78px);
   border-radius: 25px;
   opacity: 1;
@@ -186,6 +186,7 @@ header img {
   opacity: 0.8;
   box-shadow: 0px 0px 20px grey;
   transform: scale(1.1);
+  transition: all 400ms ease-out;
 }
 
 /**Section: Fonctionnemment**/

@@ -177,7 +177,7 @@ header img {
     height: 50px;
     border-radius: 25px;
     border:  1px transparent;
-    transition: transform 0.250s ease-in-out;
+    transition: all 400ms ease-in;
     @include gradRound($grad);
     opacity: 1;
     box-shadow: 0px 0px 10px grey;
@@ -187,6 +187,8 @@ header img {
     opacity: (0.8);
     box-shadow: 0px 0px 20px grey;
     transform: scale(1.1);
+    transition: all 400ms ease-out;
+
    }
 /**Section: Fonctionnemment**/
 .box {
@@ -285,9 +287,7 @@ p.num1, p.num2, p.num3 {
     width: 100%;
     background-color: unset;
     border-radius: 15px;
-
     background-color: white;
-
 }
 .card img {
     width: 100%;

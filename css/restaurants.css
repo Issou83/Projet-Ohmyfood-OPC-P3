@@ -135,11 +135,9 @@ header img {
   width: 25px;
   cursor: pointer;
 }
-.heart:hover {
-  border-color: white;
-}
-.heart:hover.heart-full {
+.heart:active.heart-full {
   width: 25px;
+  text-shadow: 5px 5px 5px #353535;
 }
 .heart-full {
   position: absolute;
@@ -164,10 +162,12 @@ header img {
   background-color: white;
   margin-left: 3.47%;
   margin-bottom: 16px;
-  box-shadow: 0px 5px 10px #dedddd;
+  box-shadow: 0px 5px 10px #bdbdbd;
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
+  opacity: 0;
+  transition: all 1s;
 }
 .card__delay1 {
   animation: box-animation 1s 200ms;
@@ -185,11 +185,15 @@ header img {
   animation: box-animation 1s 800ms;
   animation-fill-mode: both;
 }
+.card:hover {
+  opacity: 1;
+  transform: all 2s;
+}
 .card:hover .check {
   margin-right: 0;
 }
 .card:hover .fa-circle-check {
-  transform: rotate(-360deg);
+  transform: rotate(360deg);
 }
 
 .card-text {
@@ -268,13 +272,15 @@ header img {
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: transform 0.5s;
+  transition: all 400ms ease-in;
   box-shadow: 0px 0px 10px grey;
+  opacity: 1;
 }
 .btn:hover {
   opacity: 0.8;
   box-shadow: 0px 0px 20px grey;
   transform: scale(1.1);
+  transition: all 400ms ease-out;
 }
 
 .command {
