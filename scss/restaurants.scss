@@ -84,7 +84,7 @@ p {
 a {
   text-decoration: none;
 }
-a:visited {
+a:visited, p, h1, h2, h3 {
   color: black;
 }
 img {
@@ -147,35 +147,45 @@ header img {
   margin-right: 4.8%;
 }
 
-
-.heart {
+.heartcase {
   position: relative;
-  display: flex;
-  font-size: 25px;
-  width: 25px;
+  
+}
+.heart {
+  position: absolute;
   cursor: pointer;
-
-  &:active {
-
-    &.heart-full {
-    width: 25px;
-    text-shadow: 5px 5px 5px #353535;
+  z-index: 1;
+  font-size: 25px;
+  &-full {
+    top: 2.5px;
+    left: 2px;
+    font-size: 21.5px;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    font-weight: bold;
+    background: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: all 1s;
+    transition-duration: 1s;
+    &:hover {
+      z-index: 0;
+      opacity: 1;
     }
   }
-  &-full {
-    position: absolute;
-    top: 34px;
-
-
-    background: linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 2;
-    transition: all ease-in-out 0.750s;
-    width: 0px;
-    box-shadow: 10px#353535 ;
-  }
+}
+.fa-circle-check {
+ font-size: 20px;
+ @include centerXY;
+ height: 100%;
+ width: 100%;
+ color: white;
+ overflow: hidden;
+ transition: all 1s;
+ 
 }
 .card {
   word-wrap: break-word; 
@@ -191,7 +201,6 @@ header img {
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
-  opacity: (0);
   transition: all 1s;
   &__delay1 {
     animation: box-animation $anim1;
@@ -210,8 +219,7 @@ header img {
     animation-fill-mode: both;
   }
   &:hover {
-opacity: (1);
-transform: all 2s;
+    box-shadow: 0px 5px 10px #4d4d4d;
       & .check {
         margin-right: 0;  
       }
@@ -237,16 +245,6 @@ transform: all 2s;
   font-weight: 700;
   margin: 0px 12px 0px 0px;
 }
- .fa-circle-check {
-  font-size: 20px;
-  @include centerXY;
-  height: 100%;
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  transition: all 1s;
-  
- }
  .check {
   overflow: hidden;
   height: 100%;
@@ -299,9 +297,11 @@ transform: all 2s;
 }
 //Footer et ses liens
 footer {
+  width: 100%;
   position: absolute;
   font-family: "Shrikhand";
   background-color: #353535;
+  margin-top: 1500px;
 }
 footer p,
 footer i,
