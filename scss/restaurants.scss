@@ -62,6 +62,17 @@ $anim4: 1s 800ms;
     opacity: 1;
   }
 }
+@keyframes fill {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
 //Régles générals , appliquées sur toute la pages
 
 *,
@@ -145,36 +156,35 @@ header img {
   justify-content: space-between;
   align-items: center;
   margin-right: 4.8%;
+  margin-right: 4.8%;
 }
 
 .heartcase {
   position: relative;
-  
+  margin-right: 4.8%;
+  @include centerXY;
 }
-.heart {
+
+.heart-empt{
   position: absolute;
-  cursor: pointer;
-  z-index: 1;
   font-size: 25px;
-  &-full {
-    top: 2.5px;
-    left: 2px;
-    font-size: 21.5px;
-    z-index: 1;
-    opacity: 0;
-    position: absolute;
-    font-weight: bold;
-    background: linear-gradient(#ff79da, #9356dc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    transition: all 1s;
-    transition-duration: 1s;
-    &:hover {
-      z-index: 0;
-      opacity: 1;
-    }
+  z-index: 1;
+}
+.heart-full {
+
+  position: absolute;
+  font-size: 25px;
+  color: transparent;
+  z-index: 2;
+  opacity: 0;
+  font-weight: bold;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+    animation: fill 0.4s;
   }
 }
 .fa-circle-check {

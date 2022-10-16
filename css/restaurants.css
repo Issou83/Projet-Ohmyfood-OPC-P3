@@ -34,6 +34,17 @@
     opacity: 1;
   }
 }
+@keyframes fill {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 *,
 *:before,
 *:after {
@@ -126,37 +137,38 @@ header img {
   justify-content: space-between;
   align-items: center;
   margin-right: 4.8%;
+  margin-right: 4.8%;
 }
 
 .heartcase {
   position: relative;
+  margin-right: 4.8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.heart {
+.heart-empt {
   position: absolute;
-  cursor: pointer;
-  z-index: 1;
   font-size: 25px;
-}
-.heart-full {
-  top: 2.5px;
-  left: 2px;
-  font-size: 21.5px;
   z-index: 1;
-  opacity: 0;
+}
+
+.heart-full {
   position: absolute;
+  font-size: 25px;
+  color: transparent;
+  z-index: 2;
+  opacity: 0;
   font-weight: bold;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  transition: all 1s;
-  transition-duration: 1s;
+  background-clip: text;
+  transition: opacity 0.3s;
 }
 .heart-full:hover {
-  z-index: 0;
   opacity: 1;
+  animation: fill 0.4s;
 }
 
 .fa-circle-check {
