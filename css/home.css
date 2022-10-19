@@ -1,6 +1,61 @@
-@charset "UTF-8";
-/*Mixin pages d'acceuil*/
-/*Régles générals , appliquées sur toute la pages*/
+@keyframes fill {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bg-load {
+  0% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(100%);
+  }
+  99% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(100%);
+  }
+  100% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(0%);
+  }
+}
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(0);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #99E2D0;
+    border-right-color: #99E2D0;
+    box-shadow: 0px 0px 1000px #9356DC;
+  }
+  33% {
+    transform: rotate(360deg) scale(1);
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+    border-left-color: #FF79DA;
+    border-right-color: #FF79DA;
+    box-shadow: 0px 0px 1000px #9356DC;
+  }
+  66% {
+    transform: rotate(720deg) scale(-1.2);
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+    border-left-color: #FF79DA;
+    border-right-color: #FF79DA;
+    box-shadow: 0px 0px 1000px #FF79DA;
+  }
+  100% {
+    transform: rotate(1040deg) scale(0);
+    border-top-color: #9356DC;
+    border-bottom-color: #9356DC;
+    border-left-color: #99E2D0;
+    border-right-color: #99E2D0;
+  }
+}
 *,
 *:before,
 *:after {
@@ -29,10 +84,15 @@ a:visited, a, p, h1, h2, h3 {
   color: black;
 }
 
-/*Charmement de la page*/
 .load {
+  z-index: 1;
+  position: fixed;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-animation: bg-load 3s forwards;
+  animation: bg-load 3s forwards;
 }
 
 .loader {
@@ -42,64 +102,35 @@ a:visited, a, p, h1, h2, h3 {
   left: 0;
   right: 0;
   margin: auto;
-  z-index: -6;
-  border: 10px ridge transparent;
-  width: 150px;
-  height: 150px;
+  border: 5px ridge transparent;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  animation: chargeur 2.5s ease-in-out;
   box-shadow: transparent;
+  -webkit-animation: chargeur 1s ease-in-out;
+  animation: chargeur 1.5s ease-in-out;
+  animation-iteration-count: 2;
+}
+.loader-pos1 {
+  animation-delay: 100ms;
+  right: 300px;
+}
+.loader-pos2 {
+  animation-delay: 200ms;
+  right: 100px;
+}
+.loader-pos3 {
+  animation-delay: 300ms;
+  left: 100px;
+}
+.loader-pos4 {
+  animation-delay: 400ms;
+  left: 300px;
 }
 
-@keyframes chargeur {
-  0% {
-    transform: rotate(0deg) scale(0);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    border-left-color: #99E2D0;
-    border-right-color: #99E2D0;
-    z-index: 3;
-    box-shadow: 0px 0px 1000px #353535;
-  }
-  20% {
-    transform: rotate(1080deg) scale(1);
-    border-top-color: #99E2D0;
-    border-bottom-color: #99E2D0;
-    border-left-color: #FF79DA;
-    border-right-color: #FF79DA;
-    box-shadow: 0px 0px 1000px #353535;
-  }
-  40% {
-    transform: rotate(-1080deg) scale(0.5);
-    border-top-color: #99E2D0;
-    border-bottom-color: #99E2D0;
-    border-left-color: #FF79DA;
-    border-right-color: #FF79DA;
-    box-shadow: 0px 0px 1000px #353535;
-  }
-  60% {
-    transform: rotate(2140deg) scale(1.5);
-    border-top-color: #99E2D0;
-    border-bottom-color: #99E2D0;
-    border-left-color: #FF79DA;
-    border-right-color: #FF79DA;
-    box-shadow: 0px 0px 1000px #353535;
-  }
-  100% {
-    transform: rotate(-3220deg) scale(-13);
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
-    border-left-color: #99E2D0;
-    border-right-color: #99E2D0;
-    z-index: 3;
-    box-shadow: 0px 0px 1000px #353535;
-  }
-}
-/*Le header et position du logo*/
 header {
   display: block;
 }
-
 header figure {
   display: flex;
   justify-content: center;
@@ -109,7 +140,6 @@ header figure {
   padding-bottom: 13px;
   padding-top: 23px;
 }
-
 header img {
   width: 164px;
 }
@@ -129,7 +159,6 @@ header img {
   background-color: #eaeaea;
 }
 
-/*Section Explor*/
 .secExplor {
   display: flex;
   flex-direction: column;
@@ -138,64 +167,61 @@ header img {
   margin: 0 auto;
   background-color: #f6f6f6;
 }
-
 .secExplor h1 {
   width: 62.5%;
-  display: flex;
   text-align: center;
-  justify-content: center;
   font-size: 24px;
   font-weight: 800;
   margin: 40px auto 16px auto;
 }
-
 .secExplor p {
   font-size: 17px;
   font-weight: 300;
   width: 81.6%;
-  display: flex;
   text-align: center;
-  justify-content: center;
   margin: 0px auto 0px;
 }
-
-.btn-text {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-}
-
 .secExplor .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 32px auto 57px auto;
-  width: 218px;
+  width: 58.13%;
   height: 50px;
   border-radius: 25px;
   border: 1px transparent;
-  transition: all 400ms ease-in;
+  transition: all 200ms ease-in;
   background: linear-gradient(176deg, #ff79da, #9356dc 78px);
   border-radius: 25px;
   opacity: 1;
   box-shadow: 0px 0px 10px grey;
   cursor: pointer;
 }
-
-.btn:hover {
+.secExplor .btn-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.secExplor .btn:hover {
   opacity: 0.8;
   box-shadow: 0px 0px 20px grey;
   transform: scale(1.1);
-  transition: all 0ms ease-out;
+  transition: all 200ms ease-out;
 }
 
-/**Section: Fonctionnemment**/
+.secFonction p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.secFonction h2 {
+  font-size: 24px;
+  margin: 52px 0px 20px 5.33%;
+}
+
 .box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 54px;
+  margin: 0px 5.33% 54px 5.33%;
 }
 
 .fa-mobile-screen-button,
@@ -206,45 +232,27 @@ header img {
   margin: auto;
   padding: 30px 89.3% 30px 7.5%;
   width: 20px;
+  color: #7e7e7e;
+}
+.fa-mobile-screen-button:hover,
+.fa-list-ul:hover,
+.fa-store:hover {
+  color: #9356DC;
 }
 
 .fa-mobile-screen-button {
   padding-left: 8.1%;
 }
 
-.fa-mobile-screen-button:hover,
-.fa-list-ul:hover,
-.fa-store:hover {
-  color: #9356dc;
-}
-
-.box a {
-  display: flex;
-  align-items: center;
-  width: 89.33%;
-  height: 74px;
-  margin: 12px auto;
-}
-
 .name_btn {
   padding: 0px 0px 0px 16.53%;
 }
 
-.secFonction p {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.secFonction h2 {
-  font-size: 24px;
-  margin: 48px 0px 20px 5.33%;
-}
-
-.box button {
+.box-btn {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 12px 0px 12px 12px;
+  margin: 12px 0 12px 0px;
   padding: 0;
   color: black;
   border: transparent;
@@ -253,49 +261,45 @@ header img {
   background-color: #f6f6f6;
   border-radius: 18px;
   cursor: pointer;
-  box-shadow: 0px 2px 10px rgb(206, 206, 206);
+  box-shadow: 0px 5px 10px rgb(219, 219, 219);
+  transition: all 200ms ease-in;
 }
-
-.box button:hover {
-  box-shadow: 10px 10px 10px grey;
+.box-btn:hover {
+  box-shadow: 0px 10px 10px rgb(184, 184, 184);
   background-color: #f5edff;
 }
-
-button i {
-  color: #7e7e7e;
-}
-
-p.num1, p.num2, p.num3 {
-  font-weight: 100;
-  position: absolute;
+.box-btn .num1, .box-btn .num2, .box-btn .num3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 100;
+  position: absolute;
   left: -12px;
   height: 24px;
   width: 24px;
   font-size: 16px;
   color: white;
   border-radius: 50%;
-  background-color: #9356dc;
+  background-color: #9356DC;
 }
 
-.num2, .num3 {
-  width: 24px;
+.secCards {
+  background-color: #f6f6f6;
+  width: 100%;
 }
-
-/*Apparence et position des cards*/
 .secCards a {
   position: relative;
   display: flex;
   justify-content: flex-end;
-  box-shadow: 0px 10px 10px #e9e9e9;
+  box-shadow: 0px 0px 10px grey;
   margin: 0px 5.33% 18px 5.33%;
   border-radius: 25px;
   height: 251px;
+  transition: all 200ms ease-out;
 }
 .secCards a:hover {
-  box-shadow: 0px 10px 10px #a0a0a0;
+  box-shadow: 0px 0px 20px grey;
+  transition: all 200ms ease-out;
 }
 
 .card {
@@ -306,13 +310,20 @@ p.num1, p.num2, p.num3 {
   border-radius: 15px;
   background-color: white;
 }
-
 .card img {
   width: 100%;
   object-fit: cover;
   height: 174px;
   background-position: 4px 10px;
   border-radius: 15px 15px 0px 0px;
+}
+.card h3 {
+  font-size: 18px;
+  margin: 16px 0 0 14px;
+}
+.card p {
+  font-size: 18px;
+  margin: 3px 0 0 14px;
 }
 
 .news {
@@ -334,17 +345,9 @@ p.num1, p.num2, p.num3 {
   color: #008766;
 }
 
-h3 {
-  margin: 16px 0 0 14px;
-}
-
-.card p {
-  margin: 6px 0 0 14px;
-}
-
-.secCards {
-  background-color: #f6f6f6;
-  width: 100%;
+.footer-card {
+  display: flex;
+  justify-content: space-between;
 }
 
 .secCards h2 {
@@ -354,45 +357,72 @@ h3 {
   margin-bottom: unset;
 }
 
-/**Footer et ses liens**/
+.heart {
+  position: relative;
+  margin-top: 8px;
+  margin-right: 9.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-empt {
+  position: absolute;
+  font-size: 22px;
+}
+.heart-full {
+  position: absolute;
+  font-size: 22px;
+  color: transparent;
+  z-index: 2;
+  opacity: 0;
+  font-weight: bold;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.heart-full:hover {
+  opacity: 1;
+  animation: fill 0.4s;
+}
+
 footer {
-  font-family: "Shrikhand";
+  width: 100%;
+  position: absolute;
+  font-family: "Shrikhand", sans-serif;
   background-color: #353535;
 }
-
-footer p, footer i, footer h1 {
+footer h3 {
   color: white;
   font-size: 16px;
-}
-
-footer a {
-  display: flex;
-  margin-bottom: 8px;
-}
-
-footer h1 {
   font-size: 18px;
   font-weight: unset;
-  padding: 22px 0px 5px 24px;
+  padding: 22px 0px 5px 6.66%;
   margin: 0;
   font-weight: lighter;
 }
-
 footer p {
+  color: white;
+  font-size: 16px;
   font-weight: 400;
 }
-
+footer i {
+  color: white;
+  font-size: 16px;
+  font-size: 11px;
+  padding: 5px 11px 0px 0px;
+}
+footer a {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 8px;
+}
 footer ul {
   list-style-type: none;
   padding-bottom: 26px;
-  padding-left: 24px;
+  padding-left: 6.66%;
   font-family: "Roboto";
   margin: 16px 0 0px 0px;
-}
-
-footer i {
-  font-size: 11px;
-  padding: 5px 11px 0px 0px;
 }
 
 .fa-utensils {

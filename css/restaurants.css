@@ -24,16 +24,6 @@
     opacity: 1;
   }
 }
-@keyframes heart-full {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @keyframes fill {
   0% {
     transform: scale(0);
@@ -43,6 +33,18 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes btn-transformation {
+  from {
+    opacity: 1;
+    box-shadow: 0px 0px 10px grey;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    box-shadow: 0px 0px 20px grey;
+    transform: scale(1.1);
   }
 }
 *,
@@ -81,7 +83,6 @@ img {
 header {
   display: block;
   position: relative;
-  border: solid 1px black;
 }
 
 header figure {
@@ -158,13 +159,12 @@ header img {
   position: absolute;
   font-size: 25px;
   color: transparent;
-  z-index: 2;
+  z-index: 1;
   opacity: 0;
   font-weight: bold;
   background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
   background-clip: text;
-  transition: opacity 0.3s;
+  -webkit-background-clip: text;
 }
 .heart-full:hover {
   opacity: 1;
@@ -289,15 +289,12 @@ header img {
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: all 400ms ease-in;
   box-shadow: 0px 0px 10px grey;
-  opacity: 1;
+  cursor: pointer;
 }
 .btn:hover {
-  opacity: 0.8;
-  box-shadow: 0px 0px 20px grey;
-  transform: scale(1.1);
-  transition: all 400ms ease-out;
+  animation: btn-transformation 400ms ease-in-out;
+  animation-fill-mode: both;
 }
 
 .command {
@@ -307,46 +304,42 @@ header img {
 footer {
   width: 100%;
   position: absolute;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   background-color: #353535;
-  margin-top: 1500px;
+  margin-top: 1350px;
 }
-
-footer p,
-footer i,
-footer h1 {
+footer h3 {
   color: white;
   font-size: 16px;
-}
-
-footer a {
-  display: flex;
-  margin-bottom: 8px;
-}
-
-footer h1 {
   font-size: 18px;
   font-weight: unset;
-  padding: 22px 0px 5px 2.93%;
+  padding: 22px 0px 5px 6.66%;
   margin: 0;
   font-weight: lighter;
 }
-
 footer p {
+  color: white;
+  font-size: 16px;
   font-weight: 400;
 }
-
+footer i {
+  color: white;
+  font-size: 16px;
+  font-size: 11px;
+  padding: 5px 11px 0px 0px;
+}
+footer a {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  margin-bottom: 8px;
+}
 footer ul {
   list-style-type: none;
   padding-bottom: 26px;
-  padding-left: 2.93%;
+  padding-left: 6.66%;
   font-family: "Roboto";
   margin: 16px 0 0px 0px;
-}
-
-footer i {
-  font-size: 11px;
-  padding: 5px 11px 0px 0px;
 }
 
 .fa-utensils {

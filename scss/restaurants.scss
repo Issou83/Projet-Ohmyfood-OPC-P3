@@ -24,6 +24,10 @@ $anim4: 1s 800ms;
     background: $grad;
     border-radius: 25px;
 }
+@mixin content-footer {
+  color: white;
+  font-size: 16px;
+}
 //Animation check sur les cards de menu
 @keyframes slidein {
   0% {
@@ -42,6 +46,7 @@ $anim4: 1s 800ms;
     transform: rotate(0);
   }
 }
+//Apparitions progressives des menus
 @keyframes box-animation {
   0% {
     transform: translateY(20%);
@@ -52,16 +57,7 @@ $anim4: 1s 800ms;
     opacity: 1;
   }
 }
-@keyframes heart-full {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+//Remplissage du coeur
 @keyframes fill {
   0% {
     transform: scale(0);
@@ -73,8 +69,20 @@ $anim4: 1s 800ms;
       transform: scale(1);
   }
 }
+//Animation des boutons
+@keyframes btn-transformation {
+  from {
+    opacity: (1);
+    box-shadow: 0px 0px 10px grey;
+    transform: scale(1);
+  }
+  to {
+    opacity: (0.8);
+    box-shadow: 0px 0px 20px grey;
+    transform: scale(1.1);
+  }
+}
 //Régles générals , appliquées sur toute la pages
-
 *,
 *:before,
 *:after {
@@ -100,16 +108,13 @@ a:visited, p, h1, h2, h3 {
 }
 img {
   object-fit: cover;
-
   background-size: cover;
 }
 //Le header et position du logo
 header {
   display: block;
   position: relative;
-  border: solid 1px black;
 }
-
 header figure {
   @include centerX;
   margin: 0px 0 0 0;
@@ -158,30 +163,26 @@ header img {
   margin-right: 4.8%;
   margin-right: 4.8%;
 }
-
 .heartcase {
   position: relative;
   margin-right: 4.8%;
   @include centerXY;
 }
-
 .heart-empt{
   position: absolute;
   font-size: 25px;
   z-index: 1;
 }
 .heart-full {
-
   position: absolute;
   font-size: 25px;
   color: transparent;
-  z-index: 2;
+  z-index: 1;
   opacity: 0;
   font-weight: bold;
   background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
   background-clip: text;
-  transition: opacity 0.3s;
+  -webkit-background-clip: text;
   &:hover {
     opacity: 1;
     animation: fill 0.4s;
@@ -195,7 +196,6 @@ header img {
  color: white;
  overflow: hidden;
  transition: all 1s;
- 
 }
 .card {
   word-wrap: break-word; 
@@ -238,7 +238,6 @@ header img {
       }
     }
   }
-
 .card-text {
   min-width: 72.95%;
   display: flex;
@@ -255,13 +254,13 @@ header img {
   font-weight: 700;
   margin: 0px 12px 0px 0px;
 }
- .check {
-  overflow: hidden;
-  height: 100%;
-  width: 60px;
-  background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
- }
+.check {
+overflow: hidden;
+height: 100%;
+width: 60px;
+background-color: #99e2d0;
+border-radius: 0 15px 15px 0;
+}
 .check {
   height: 100%;
   margin-right: -60px;
@@ -292,16 +291,14 @@ header img {
   width: 49.6%;
   height: 50px;
   border: unset;
-  transition: all 400ms ease-in;
   box-shadow: 0px 0px 10px grey;
-  opacity: (1);
+  cursor: pointer;
   &:hover {
-   opacity: (0.8);
-   box-shadow: 0px 0px 20px grey;
-   transform: scale(1.1);
-   transition: all 400ms ease-out;
+    animation: btn-transformation 400ms ease-in-out;
+    animation-fill-mode: both;
   }
 }
+
 .command {
   color: white;
 }
@@ -309,43 +306,40 @@ header img {
 footer {
   width: 100%;
   position: absolute;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   background-color: #353535;
-  margin-top: 1500px;
-}
-footer p,
-footer i,
-footer h1 {
-  color: white;
-  font-size: 16px;
-}
-footer a {
-  display: flex;
-  margin-bottom: 8px;
-}
-
-footer h1 {
-  font-size: 18px;
-  font-weight: unset;
-  padding: 22px 0px 5px 2.93%;
-  margin: 0;
-  font-weight: lighter;
-}
-footer p {
-  font-weight: 400;
-}
-footer ul {
-  list-style-type: none;
-  padding-bottom: 26px;
-  padding-left: 2.93%;
-  font-family: "Roboto";
-  margin: 16px 0 0px 0px;
-}
-footer i {
-  font-size: 11px;
-  padding: 5px 11px 0px 0px;
+  margin-top: 1350px;
+  & h3 {
+    @include content-footer;
+    font-size: 18px;
+    font-weight: unset;
+    padding: 22px 0px 5px 6.66%;
+    margin: 0;
+    font-weight: lighter;
+  }
+  & p {
+    @include content-footer;
+    font-weight: 400;
+  }
+  & i {
+    @include content-footer;
+    font-size: 11px;
+    padding: 5px 11px 0px 0px;
+  }
+  & a {
+    @include content-footer;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  & ul {
+    list-style-type: none;
+    padding-bottom: 26px;
+    padding-left: 6.66%;
+    font-family: "Roboto";
+    margin: 16px 0 0px 0px;
+  }
 }
 .fa-utensils {
-  font-size: 11px;
-  padding: 5px 13px 0px 2px;
+font-size: 11px;
+padding: 5px 13px 0px 2px;
 }
