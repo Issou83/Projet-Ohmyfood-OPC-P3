@@ -41,7 +41,7 @@ $delay-pos4: 400ms;
         background-color: rgba(192, 192, 192, 0.7);
         transform: scale(100%);
     }
-    99%{    
+    90%{    
         background-color: rgba(192, 192, 192, 0.7);
         transform: scale(100%);
     }
@@ -121,8 +121,8 @@ a:visited, a, p, h1, h2, h3 {
     height: 100%;
     left: 0;
     top: 0;
-    -webkit-animation: bg-load 3s forwards;
-            animation: bg-load 3s forwards;
+    -webkit-animation: bg-load 1.5s forwards;
+            animation: bg-load 1.5s forwards;
 }
 .loader {
     position: fixed;
@@ -138,22 +138,22 @@ a:visited, a, p, h1, h2, h3 {
     box-shadow: transparent;
     -webkit-animation: chargeur 1s ease-in-out ;
     animation: chargeur 1.5s ease-in-out ;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     &-pos1 {
         animation-delay: $delay-pos1;
-        right: 300px;
+        right: 150px;
     }
     &-pos2 {
         animation-delay: $delay-pos2;
-        right: 100px;
+        right: 50px;
     }
     &-pos3 {
         animation-delay: $delay-pos3;
-        left: 100px;
+        left: 50px;
     }
     &-pos4 {
         animation-delay: $delay-pos4;
-        left: 300px;
+        left: 150px;
     }
   }
 

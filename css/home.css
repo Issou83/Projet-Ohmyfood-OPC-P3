@@ -14,7 +14,7 @@
     background-color: rgba(192, 192, 192, 0.7);
     transform: scale(100%);
   }
-  99% {
+  90% {
     background-color: rgba(192, 192, 192, 0.7);
     transform: scale(100%);
   }
@@ -91,8 +91,8 @@ a:visited, a, p, h1, h2, h3 {
   height: 100%;
   left: 0;
   top: 0;
-  -webkit-animation: bg-load 3s forwards;
-  animation: bg-load 3s forwards;
+  -webkit-animation: bg-load 1.5s forwards;
+  animation: bg-load 1.5s forwards;
 }
 
 .loader {
@@ -109,23 +109,23 @@ a:visited, a, p, h1, h2, h3 {
   box-shadow: transparent;
   -webkit-animation: chargeur 1s ease-in-out;
   animation: chargeur 1.5s ease-in-out;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 .loader-pos1 {
   animation-delay: 100ms;
-  right: 300px;
+  right: 150px;
 }
 .loader-pos2 {
   animation-delay: 200ms;
-  right: 100px;
+  right: 50px;
 }
 .loader-pos3 {
   animation-delay: 300ms;
-  left: 100px;
+  left: 50px;
 }
 .loader-pos4 {
   animation-delay: 400ms;
-  left: 300px;
+  left: 150px;
 }
 
 header {
