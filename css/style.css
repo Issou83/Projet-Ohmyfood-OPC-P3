@@ -136,27 +136,33 @@ header figure {
   justify-content: center;
   margin: 0px 0 0 0;
   width: 100%;
-  box-shadow: 30px 0px 30px black;
   padding-bottom: 13px;
   padding-top: 23px;
 }
 header img {
   width: 164px;
 }
-
-.fa-location-dot {
-  margin-right: 10px;
-  font-size: 15px;
-  padding: 5px 5px 5px 5px;
+header p {
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .location {
+  position: relative;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px;
-  background-color: #eaeaea;
+  background: linear-gradient(rgb(210, 210, 210) 1px, #eaeaea 5px);
+}
+
+.fa-location-dot {
+  position: absolute;
+  left: 98px;
+  top: 11px;
+  font-size: 16px;
+  padding: 5px 5px 5px 5px;
 }
 
 .secExplor {
@@ -172,11 +178,11 @@ header img {
   text-align: center;
   font-size: 24px;
   font-weight: 800;
-  margin: 40px auto 16px auto;
+  margin: 38px auto 12px auto;
 }
 .secExplor p {
-  font-size: 17px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   width: 81.6%;
   text-align: center;
   margin: 0px auto 0px;
@@ -213,7 +219,8 @@ header img {
 
 .secFonction h2 {
   font-size: 24px;
-  margin: 52px 0px 20px 5.33%;
+  font-size: 900;
+  margin: 46px 0px 18px 5.33%;
 }
 
 .box {
@@ -221,7 +228,7 @@ header img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0px 5.33% 54px 5.33%;
+  margin: 0px 5.33% 56px 5.33%;
 }
 
 .fa-mobile-screen-button,
@@ -352,7 +359,7 @@ header img {
 
 .secCards h2 {
   font-size: 24px;
-  padding: 60px 0 24px 5.33%;
+  padding: 56px 0 24px 5.33%;
   margin-top: unset;
   margin-bottom: unset;
 }
