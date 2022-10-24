@@ -46,7 +46,7 @@ header {
 }
 .fa-location-dot {
     position: absolute;
-    left: 31%;
+    margin-right: 150px;
     top: 11px;
     font-size: 16px;
     padding: 5px 5px 5px 5px;
@@ -88,6 +88,10 @@ header {
         }
     }
 }
+    //Div pour rattraper la hauteur du footer uniquement dans la pages menu du restaurant La note enchantee
+    .divEmpty {
+        height: 84px;
+    }
   //Footer et ses liens
   .footer--height{ //hauteur du footer dans les pages menu
     margin-top: 1350px;
