@@ -1,0 +1,172 @@
+//Charmement de la page
+.load {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-animation: bg-load 1.5s forwards;
+            animation: bg-load 1.5s forwards;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px ridge transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: transparent;
+    -webkit-animation: chargeur 1s ease-in-out ;
+    animation: chargeur 1.5s ease-in-out ;
+    animation-iteration-count: 1;
+    &-pos1 {
+        animation-delay: $delay-pos1;
+        right: 150px;
+    }
+    &-pos2 {
+        animation-delay: $delay-pos2;
+        right: 50px;
+    }
+    &-pos3 {
+        animation-delay: $delay-pos3;
+        left: 50px;
+    }
+    &-pos4 {
+        animation-delay: $delay-pos4;
+        left: 150px;
+    }
+  }
+
+
+
+//Section Explor
+.secExplor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #f6f6f6;
+    & h1 { 
+        width: 62.5%;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+        margin: 38px auto 12px auto;
+    }
+    & p { 
+        font-size: 18px;
+        font-weight: 400;
+        width: 81.60%;
+        text-align: center;
+        margin:  0px auto 0px;
+    }
+    & .btn {
+        margin: 32px auto 57px auto;
+        width: 58.13%;
+        height: 50px;
+        border-radius: 25px;
+        border:  1px transparent;
+        transition: all 200ms ease-in;
+        @include gradRound($grad);
+        opacity: (1);
+        box-shadow: 0px 0px 10px grey;
+        cursor: pointer;
+        &-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            }
+            &:hover {
+            opacity: (0.8);
+            box-shadow: 0px 0px 20px grey;
+            transform: scale(1.1);
+            transition: all 200ms ease-out;
+           }
+    }
+}
+
+//Apparence et position des cards acceuil
+.secCards {
+    background-color: #f6f6f6;
+    width: 100%;
+    & a {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0px 0px 10px grey;    
+    margin: 0px 5.33% 18px 5.33%;
+    border-radius: 25px;
+    height: 251px;
+    transition: all 200ms ease-out;
+    &:hover {
+        box-shadow: 0px 0px 20px grey;    
+        transition: all 200ms ease-out;
+        }
+    }
+    & h2 {
+        font-size: 24px;
+        padding: 56px 0 24px 5.33%;
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+}
+.cardHome {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: unset;
+    border-radius: 15px;
+    background-color: white;
+    & img {
+    width: 100%;
+    object-fit: cover;
+    height: 174px;
+    background-position: 4px 10px;
+    border-radius: 15px 15px 0px 0px;
+    }
+    & h3 {
+        font-size: 18px;
+        margin: 16px 0 0 14px;
+    }
+    & p {
+        font-size: 18px ;
+        margin: 3px 0 0 14px ;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.news {
+    position: absolute;
+    @include centerXY;
+    margin-top: 13px;
+    margin-right: 13px;
+    width: 81px;
+    height: 29px;
+    background: $terColor;
+    z-index: 2;
+    border-radius: 3px;
+    &-text {
+        font-size: 14px;
+        font-weight: 800;
+        color: #008766;
+    }
+}
+.secFonction  {
+    & p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    & h2 {
+        font-size: 24px;
+        font-size: 900;
+        margin: 46px 0px 18px 5.33%;
+    }
+}    

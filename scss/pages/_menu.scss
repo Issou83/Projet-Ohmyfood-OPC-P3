@@ -1,0 +1,132 @@
+//Main des pages menu
+.imgResto {
+    width: 100%;
+    margin: 0;
+    & img {
+    object-fit: cover;
+    position: absolute;
+    top: 66px;
+    width: 100%;
+    height: 260px;
+    z-index: 1;
+    }
+  }
+  .menu {
+    position: absolute;
+    top: 284px;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    z-index: 2;
+    & .menu-title {
+    margin-left: 4.8%;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Shrikhand";
+    }
+  } 
+  .title-like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4.8%;
+    margin-right: 4.8%;
+  }
+  .fa-circle-check {
+    font-size: 20px;
+    @include centerXY;
+    height: 100%;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    transition: all 1s;
+   }
+   .box-title {
+     font-size: 16px;
+     padding-bottom: 5px;
+     margin-left: 4.8%;
+     margin-bottom: 15px;
+     border-bottom: solid #99e2d0;
+     width: 40px;
+   }
+   .card { //card des menus
+     word-wrap: break-word; 
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width: 93.06%;
+     height: 68px;
+     background-color: white;
+     margin-left: 3.47%;
+     margin-bottom: 16px;
+     box-shadow: 0px 5px 10px #bdbdbd;
+     border-radius: 15px;
+     cursor: pointer;
+     overflow: hidden;
+     transition: all 1s;
+     &__delay1 {
+       animation: box-animation $anim1;
+       animation-fill-mode: both;
+     }
+     &__delay2 {
+       animation: box-animation $anim2;
+       animation-fill-mode: both;
+     }
+     &__delay3 {
+       animation: box-animation $anim3;
+       animation-fill-mode: both;
+     }
+     &__delay4 {
+       animation: box-animation $anim4;
+       animation-fill-mode: both;
+     }
+     &:hover {
+       box-shadow: 0px 5px 10px #4d4d4d;
+         & .check {
+           margin-right: 0;  
+         }
+         & .fa-circle-check {
+           transform: rotate(360deg);
+         }
+       }
+     &-text {
+     min-width: 72.95%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     }
+     &-valid {
+     display: flex;
+     align-items: flex-end;
+     }
+   }
+   .price {
+     height: 30px;
+     font-size: 14px;
+     font-weight: 700;
+     margin: 0px 12px 0px 0px;
+   }
+   .check {
+     overflow: hidden;
+     height: 100%;
+     width: 60px;
+     background-color: #99e2d0;
+     border-radius: 0 15px 15px 0;
+     height: 100%;
+     margin-right: -60px;
+     transition: margin-right 1s;
+   }
+   
+   .card-title,
+   .card-text p {
+     margin: 0px 0px 0px 2.93%;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     overflow: hidden;
+   }
+   .card-title {
+     font-size: 17px;
+   }
+
+   
+

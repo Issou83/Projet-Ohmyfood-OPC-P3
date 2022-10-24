@@ -1,0 +1,22 @@
+//Mixins pages d'acceuil
+
+@mixin gradRound($grad) {
+    background: $grad;
+    border-radius: 25px;
+}
+@mixin centerXY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin centerX {
+    display: flex;
+    justify-content: center;
+}
+@mixin content-footer {
+    color: white;
+    font-size: 16px;
+}
+@mixin grad {
+    background-color: linear-gradient(176deg, #ff79da, #9356dc 78px);
+}
