@@ -1,3 +1,11 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @keyframes fill {
   0% {
     transform: scale(0);
@@ -78,14 +86,6 @@
     transform: scale(1.1);
   }
 }
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -240,12 +240,69 @@ footer ul {
   padding: 5px 13px 0px 2px;
 }
 
-.box {
+.btnExplor {
+  margin: 32px auto 57px auto;
+  width: 58.13%;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px transparent;
+  transition: all 200ms ease-in;
+  background: linear-gradient(176deg, #ff79da, #9356dc 78px);
+  border-radius: 25px;
+  opacity: 1;
+  box-shadow: 0px 0px 10px grey;
+  cursor: pointer;
+}
+.btnExplor__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.btnExplor:hover {
+  opacity: 0.8;
+  box-shadow: 0px 0px 20px grey;
+  transform: scale(1.1);
+  transition: all 200ms ease-out;
+}
+
+.btnFonction {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin: 12px 0 12px 0px;
+  padding: 0;
+  color: black;
+  border: transparent;
+  width: 100%;
+  height: 74px;
+  background-color: #f6f6f6;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgb(219, 219, 219);
+  transition: all 200ms ease-in;
+}
+.btnFonction:hover {
+  box-shadow: 0px 10px 10px rgb(184, 184, 184);
+  background-color: #f5edff;
+}
+.btnFonction__num1, .btnFonction__num2, .btnFonction__num3 {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px 5.33% 56px 5.33%;
+  font-weight: 100;
+  position: absolute;
+  left: -12px;
+  height: 24px;
+  width: 24px;
+  font-size: 16px;
+  color: white;
+  border-radius: 50%;
+  background-color: #9356DC;
+}
+.btnFonction__text {
+  padding: 0px 0px 0px 16.53%;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .fa-mobile-screen-button,
@@ -266,47 +323,6 @@ footer ul {
 
 .fa-mobile-screen-button {
   padding-left: 8.1%;
-}
-
-.name_btn {
-  padding: 0px 0px 0px 16.53%;
-}
-
-.box-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 12px 0 12px 0px;
-  padding: 0;
-  color: black;
-  border: transparent;
-  width: 100%;
-  height: 74px;
-  background-color: #f6f6f6;
-  border-radius: 18px;
-  cursor: pointer;
-  box-shadow: 0px 5px 10px rgb(219, 219, 219);
-  transition: all 200ms ease-in;
-}
-.box-btn:hover {
-  box-shadow: 0px 10px 10px rgb(184, 184, 184);
-  background-color: #f5edff;
-}
-.box-btn .num1,
-.box-btn .num2,
-.box-btn .num3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 100;
-  position: absolute;
-  left: -12px;
-  height: 24px;
-  width: 24px;
-  font-size: 16px;
-  color: white;
-  border-radius: 50%;
-  background-color: #9356DC;
 }
 
 .btn {
@@ -377,10 +393,9 @@ footer ul {
 
 .secExplor {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  flex-direction: column;
   background-color: #f6f6f6;
 }
 .secExplor h1 {
@@ -397,29 +412,19 @@ footer ul {
   text-align: center;
   margin: 0px auto 0px;
 }
-.secExplor .btn {
-  margin: 32px auto 57px auto;
-  width: 58.13%;
-  height: 50px;
-  border-radius: 25px;
-  border: 1px transparent;
-  transition: all 200ms ease-in;
-  background: linear-gradient(176deg, #ff79da, #9356dc 78px);
-  border-radius: 25px;
-  opacity: 1;
-  box-shadow: 0px 0px 10px grey;
-  cursor: pointer;
+
+.secFonction__title {
+  font-size: 24px;
+  font-size: 900;
+  margin: 46px 0px 18px 5.33%;
 }
-.secExplor .btn-text {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-}
-.secExplor .btn:hover {
-  opacity: 0.8;
-  box-shadow: 0px 0px 20px grey;
-  transform: scale(1.1);
-  transition: all 200ms ease-out;
+
+.boxFonction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5.33% 56px 5.33%;
 }
 
 .secCards {
@@ -492,16 +497,6 @@ footer ul {
   font-size: 14px;
   font-weight: 800;
   color: #008766;
-}
-
-.secFonction .name_btn {
-  font-size: 16px;
-  font-weight: 600;
-}
-.secFonction h2 {
-  font-size: 24px;
-  font-size: 900;
-  margin: 46px 0px 18px 5.33%;
 }
 
 .imgResto {

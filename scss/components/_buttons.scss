@@ -1,11 +1,71 @@
-//Section: Fonctionnemment
+//Bouton danla section Explorer
+.btnExplor {
+    margin: 32px auto 57px auto;
+    width: 58.13%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px transparent;
+    transition: all 200ms ease-in;
+    @include gradRound($grad);
+    opacity: (1);
+    box-shadow: 0px 0px 10px grey;
+    cursor: pointer;
 
-.box {
+    &__text {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+    }
+
+    &:hover {
+        opacity: (0.8);
+        box-shadow: 0px 0px 20px grey;
+        transform: scale(1.1);
+        transition: all 200ms ease-out;
+    }
+}
+//Boutons dans la section Fonctionnemment
+.btnFonction {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0px 5.33% 56px 5.33%;
+    margin: 12px 0 12px 0px;
+    padding: 0;
+    color: black;
+    border: transparent;
+    width: 100%;
+    height: 74px;
+    background-color: #f6f6f6;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(219, 219, 219);
+    transition: all 200ms ease-in;
+
+    &:hover {
+        box-shadow: 0px 10px 10px rgb(184, 184, 184);
+        background-color: #f5edff;
+    }
+
+    &__num1,
+    &__num2,
+    &__num3 {
+        @include centerXY;
+        font-weight: 100;
+        position: absolute;
+        left: -12px;
+        height: 24px;
+        width: 24px;
+        font-size: 16px;
+        color: white;
+        border-radius: 50%;
+        background-color: $prColor;
+    }
+
+    &__text {
+        padding: 0px 0px 0px 16.53%;
+        font-size: 16px;
+        font-weight: 600;
+    }
 }
 
 .fa-mobile-screen-button,
@@ -27,49 +87,7 @@
     padding-left: 8.1%;
 }
 
-.name_btn {
-    padding: 0px 0px 0px 16.53%;
-}
-
-.box-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 12px 0 12px 0px;
-    padding: 0;
-    color: black;
-    border: transparent;
-    width: 100%;
-    height: 74px;
-    background-color: #f6f6f6;
-    border-radius: 18px;
-    cursor: pointer;
-    box-shadow: 0px 5px 10px rgb(219, 219, 219);
-    transition: all 200ms ease-in;
-
-    &:hover {
-        box-shadow: 0px 10px 10px rgb(184, 184, 184);
-        background-color: #f5edff;
-    }
-
-    & .num1,
-    .num2,
-    .num3 {
-        @include centerXY;
-        font-weight: 100;
-        position: absolute;
-        left: -12px;
-        height: 24px;
-        width: 24px;
-        font-size: 16px;
-        color: white;
-        border-radius: 50%;
-        background-color: $prColor;
-    }
-}
-
-//boutton commander dans les  pages des menus
-
+//boutton commander dans les pages des menus
 .btn {
     @include centerXY;
     @include gradRound($grad);
