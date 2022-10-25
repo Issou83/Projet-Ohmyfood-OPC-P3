@@ -292,7 +292,9 @@ footer ul {
   box-shadow: 0px 10px 10px rgb(184, 184, 184);
   background-color: #f5edff;
 }
-.box-btn .num1, .box-btn .num2, .box-btn .num3 {
+.box-btn .num1,
+.box-btn .num2,
+.box-btn .num3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,10 +307,6 @@ footer ul {
   color: white;
   border-radius: 50%;
   background-color: #9356DC;
-}
-
-.btn__command {
-  color: white;
 }
 
 .btn {
@@ -327,6 +325,10 @@ footer ul {
 .btn:hover {
   animation: btn-transformation 400ms ease-in-out;
   animation-fill-mode: both;
+}
+.btn__command {
+  color: white;
+  font-size: 16px;
 }
 
 .load {
@@ -492,7 +494,7 @@ footer ul {
   color: #008766;
 }
 
-.secFonction p {
+.secFonction .name_btn {
   font-size: 16px;
   font-weight: 600;
 }

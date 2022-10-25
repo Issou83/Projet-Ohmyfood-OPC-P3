@@ -7,6 +7,7 @@
     align-items: center;
     margin: 0px 5.33% 56px 5.33%;
 }
+
 .fa-mobile-screen-button,
 .fa-list-ul,
 .fa-store {
@@ -16,13 +17,16 @@
     padding: 30px 89.30% 30px 7.5%;
     width: 20px;
     color: #7e7e7e;
+
     &:hover {
         color: $prColor;
     }
 }
+
 .fa-mobile-screen-button {
-padding-left: 8.1%;
+    padding-left: 8.1%;
 }
+
 .name_btn {
     padding: 0px 0px 0px 16.53%;
 }
@@ -42,11 +46,15 @@ padding-left: 8.1%;
     cursor: pointer;
     box-shadow: 0px 5px 10px rgb(219, 219, 219);
     transition: all 200ms ease-in;
+
     &:hover {
         box-shadow: 0px 10px 10px rgb(184, 184, 184);
         background-color: #f5edff;
     }
-    & .num1, .num2, .num3 {
+
+    & .num1,
+    .num2,
+    .num3 {
         @include centerXY;
         font-weight: 100;
         position: absolute;
@@ -58,12 +66,11 @@ padding-left: 8.1%;
         border-radius: 50%;
         background-color: $prColor;
     }
-} 
+}
+
 //boutton commander dans les  pages des menus
-.btn__command {
-    color: white;
-  }
-  .btn {
+
+.btn {
     @include centerXY;
     @include gradRound($grad);
     margin: 50px auto 57px auto;
@@ -72,8 +79,14 @@ padding-left: 8.1%;
     border: unset;
     box-shadow: 0px 0px 10px grey;
     cursor: pointer;
+
     &:hover {
-      animation: btn-transformation 400ms ease-in-out;
-      animation-fill-mode: both;
+        animation: btn-transformation 400ms ease-in-out;
+        animation-fill-mode: both;
     }
-  }
+
+    &__command {
+        color: white;
+        font-size: 16px;
+    }
+}
