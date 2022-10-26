@@ -1,86 +1,99 @@
 //Animations des coeurs
 @keyframes fill {
-    0% {
-        transform: scale(0);
-    }
-    70% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
+
 //Apparitions progressives des menus
 @keyframes box-animation {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
   }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 //loading page d'acceuil
-  @keyframes bg-load {
-    0%{    
-        background-color: rgba(192, 192, 192, 0.7);
-        transform: scale(100%);
-    }
-    90%{    
-        background-color: rgba(192, 192, 192, 0.7);
-        transform: scale(100%);
-    }
-    100%{     
-        background-color: rgba(192, 192, 192, 0.7);
-        transform: scale(0%);
-    }
+@keyframes bg-load {
+  0% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(100%);
   }
-  @keyframes chargeur {
-    0%{
-      transform: rotate(0deg) scale(0);
-      border-top-color: $prColor;
-      border-bottom-color: $prColor;
-      border-left-color: $terColor;
-      border-right-color: $terColor;
-      box-shadow: 0px 0px 1000px $prColor;
-    }
-    33% {
-        transform: rotate(360deg) scale(1);
-        border-top-color: $terColor;
-        border-bottom-color: $terColor;
-        border-left-color: $secColor;
-        border-right-color: $secColor;
-        box-shadow: 0px 0px 1000px $prColor;
 
-    }
-     66% {
-        transform: rotate(720deg) scale(-1.2);
-        border-top-color: $terColor;
-        border-bottom-color: $terColor;
-        border-left-color: $secColor;
-        border-right-color: $secColor;
-        box-shadow: 0px 0px 1000px $secColor;
-
-    }
-    100%{
-        transform: rotate(1040deg) scale(0);
-        border-top-color: $prColor;
-        border-bottom-color: $prColor;
-        border-left-color: $terColor;
-        border-right-color: $terColor;
-    }
+  90% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(100%);
   }
+
+  100% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(0%);
+  }
+}
+
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(0);
+    border-top-color: $prColor;
+    border-bottom-color: $prColor;
+    border-left-color: $terColor;
+    border-right-color: $terColor;
+    box-shadow: 0px 0px 1000px $prColor;
+  }
+
+  33% {
+    transform: rotate(360deg) scale(1);
+    border-top-color: $terColor;
+    border-bottom-color: $terColor;
+    border-left-color: $secColor;
+    border-right-color: $secColor;
+    box-shadow: 0px 0px 1000px $prColor;
+
+  }
+
+  66% {
+    transform: rotate(720deg) scale(-1.2);
+    border-top-color: $terColor;
+    border-bottom-color: $terColor;
+    border-left-color: $secColor;
+    border-right-color: $secColor;
+    box-shadow: 0px 0px 1000px $secColor;
+
+  }
+
+  100% {
+    transform: rotate(1040deg) scale(0);
+    border-top-color: $prColor;
+    border-bottom-color: $prColor;
+    border-left-color: $terColor;
+    border-right-color: $terColor;
+  }
+}
+
 //Animation des boutons
 @keyframes btn-transformation {
-    from {
-      opacity: (1);
-      box-shadow: 0px 0px 10px grey;
-      transform: scale(1);
-    }
-    to {
-      opacity: (0.8);
-      box-shadow: 0px 0px 20px grey;
-      transform: scale(1.1);
-    }
+  from {
+    opacity: (1);
+    box-shadow: 0px 0px 10px grey;
+    transform: scale(1);
   }
+
+  to {
+    opacity: (0.8);
+    box-shadow: 0px 0px 20px grey;
+    transform: scale(1.1);
+  }
+}
