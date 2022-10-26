@@ -21,7 +21,9 @@
   border-radius: 40px 40px 0 0;
   z-index: 2;
 
-  & .menu-title {
+  &-title {
+    margin-top: 35px;
+    margin-bottom: 15px;
     margin-left: 4.8%;
     font-size: 30px;
     font-weight: 500;
@@ -46,9 +48,12 @@
   overflow: hidden;
   transition: all 1s;
 }
-
-.box-title {
-  font-size: 16px;
+.boxMenu {
+  margin-bottom: 50px;
+}
+.box__title {
+  font-size: 18px;
+  font-weight: 400;
   padding-bottom: 5px;
   margin-left: 4.8%;
   margin-bottom: 15px;
@@ -56,8 +61,7 @@
   width: 40px;
 }
 
-.card {
-  //card des menus
+.card { //card des menus
   word-wrap: break-word;
   display: flex;
   flex-direction: row;
@@ -72,7 +76,7 @@
   cursor: pointer;
   overflow: hidden;
   transition: all 1s;
-
+//Apparitons progressive des menus
   &__delay1 {
     animation: box-animation $anim1;
     animation-fill-mode: both;
@@ -96,7 +100,7 @@
   &:hover {
     box-shadow: 0px 5px 10px #4d4d4d;
 
-    & .check {
+    & .card__check {
       margin-right: 0;
     }
 
@@ -105,27 +109,34 @@
     }
   }
 
-  &-text {
+  &__text {
     min-width: 72.95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-  &-valid {
+  
+  &__title {
+    font-size: 18px;
+    margin: 0px 0px 0px 4%;
+    margin-bottom: 2px;
+  }
+  &__text p {
+    font-size: 16px;
+    margin: 0px 0px 0px 4%;
+    margin-top: 3px;
+  }
+  &__valid {
     display: flex;
     align-items: flex-end;
   }
-}
-
-.price {
-  height: 30px;
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0px 12px 0px 0px;
-}
-
-.check {
+  &__price {
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px 12px 0px 0px;
+  }
+&__check {
   overflow: hidden;
   height: 100%;
   width: 60px;
@@ -135,15 +146,18 @@
   margin-right: -60px;
   transition: margin-right 1s;
 }
+}
+.card__title,
+.card__text p {
 
-.card-title,
-.card-text p {
-  margin: 0px 0px 0px 2.93%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.card-title {
-  font-size: 17px;
+
+
+  //hauteur du footer dans les pages menu
+.footer--height {
+  margin-top: 1410px;
 }

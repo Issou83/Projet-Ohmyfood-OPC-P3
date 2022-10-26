@@ -53,17 +53,15 @@ header {
   left: 24px;
 }
 
-//Coeurs pour toutes les pages
-
-.heartcase {
   //Position du couer dans le pages menu
+.heartcase {
   position: relative;
   margin-right: 4.8%;
+  margin-top: 20px;
   @include centerXY;
 }
-
+  //Coeurs et son animation por toutes les pages
 .heart {
-  //Coeurs et son animation
   position: relative;
   margin-top: 8px;
   margin-right: 9.6%;
@@ -98,10 +96,7 @@ header {
 }
 
 //Footer et ses liens
-.footer--height {
-  //hauteur du footer dans les pages menu
-  margin-top: 1350px;
-}
+
 
 footer {
   width: 100%;

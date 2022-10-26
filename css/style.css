@@ -150,6 +150,7 @@ header p {
 .heartcase {
   position: relative;
   margin-right: 4.8%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,10 +186,6 @@ header p {
 
 .divEmpty {
   height: 84px;
-}
-
-.footer--height {
-  margin-top: 1350px;
 }
 
 footer {
@@ -532,7 +529,9 @@ footer ul {
   border-radius: 40px 40px 0 0;
   z-index: 2;
 }
-.menu .menu-title {
+.menu-title {
+  margin-top: 35px;
+  margin-bottom: 15px;
   margin-left: 4.8%;
   font-size: 30px;
   font-weight: 500;
@@ -559,8 +558,13 @@ footer ul {
   transition: all 1s;
 }
 
-.box-title {
-  font-size: 16px;
+.boxMenu {
+  margin-bottom: 50px;
+}
+
+.box__title {
+  font-size: 18px;
+  font-weight: 400;
   padding-bottom: 5px;
   margin-left: 4.8%;
   margin-bottom: 15px;
@@ -603,31 +607,39 @@ footer ul {
 .card:hover {
   box-shadow: 0px 5px 10px #4d4d4d;
 }
-.card:hover .check {
+.card:hover .card__check {
   margin-right: 0;
 }
 .card:hover .fa-circle-check {
   transform: rotate(360deg);
 }
-.card-text {
+.card__text {
   min-width: 72.95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.card-valid {
+.card__title {
+  font-size: 18px;
+  margin: 0px 0px 0px 4%;
+  margin-bottom: 2px;
+}
+.card__text p {
+  font-size: 16px;
+  margin: 0px 0px 0px 4%;
+  margin-top: 3px;
+}
+.card__valid {
   display: flex;
   align-items: flex-end;
 }
-
-.price {
+.card__price {
   height: 30px;
   font-size: 14px;
   font-weight: 700;
   margin: 0px 12px 0px 0px;
 }
-
-.check {
+.card__check {
   overflow: hidden;
   height: 100%;
   width: 60px;
@@ -638,16 +650,15 @@ footer ul {
   transition: margin-right 1s;
 }
 
-.card-title,
-.card-text p {
-  margin: 0px 0px 0px 2.93%;
+.card__title,
+.card__text p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.card-title {
-  font-size: 17px;
+.footer--height {
+  margin-top: 1410px;
 }
 
 /*# sourceMappingURL=style.css.map */
