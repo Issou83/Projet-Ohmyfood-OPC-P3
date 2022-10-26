@@ -2,49 +2,63 @@
 .load {
     z-index: 1;
     position: fixed;
+    display: flex;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    -webkit-animation: bg-load 1.5s forwards;
-    animation: bg-load 1.5s forwards;
+    -webkit-animation: bg-load 3s forwards ;
+    animation: bg-load 3s forwards ;
 }
 
 .loader {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    @include centerXY;
     margin: auto;
     border: 5px ridge transparent;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     box-shadow: transparent;
-    -webkit-animation: chargeur 1s ease-in-out;
-    animation: chargeur 1.5s ease-in-out;
-    animation-iteration-count: 1;
+    -webkit-animation: chargeur 2s ease-in-out ;
+    animation: chargeur 2s ease-in-out ;
 
     &-pos1 {
         animation-delay: $delay-pos1;
-        right: 150px;
+
     }
 
     &-pos2 {
         animation-delay: $delay-pos2;
-        right: 50px;
+
     }
 
     &-pos3 {
         animation-delay: $delay-pos3;
-        left: 50px;
+
     }
 
     &-pos4 {
         animation-delay: $delay-pos4;
-        left: 150px;
+
     }
+}
+
+.location {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background: linear-gradient(rgb(210, 210, 210) 1px, #eaeaea 5px);
+}
+
+.fa-location-dot {
+    position: absolute;
+    margin-right: 150px;
+    top: 11px;
+    font-size: 16px;
+    padding: 5px 5px 5px 5px;
 }
 
 //Section Explor
@@ -71,6 +85,7 @@
 
 
 }
+
 //Section: Fonctionnemment
 .secFonction {
     &__title {
@@ -81,29 +96,28 @@
 }
 
 .boxFonction {
-    display: flex;
+    @include centerXY;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0px 5.33% 56px 5.33%;
 }
+
 //Apparence et position des cards acceuil
 .secCards {
     background-color: #f6f6f6;
     width: 100%;
-
+    height: 1200px;
     & a {
         position: relative;
         display: flex;
         justify-content: flex-end;
-        box-shadow: 0px 0px 10px grey;
+        box-shadow: $shadow-norm;
         margin: 0px 5.33% 18px 5.33%;
         border-radius: 25px;
         height: 251px;
         transition: all 200ms ease-out;
 
         &:hover {
-            box-shadow: 0px 0px 20px grey;
+            box-shadow: $shadow-hover;
             transition: all 200ms ease-out;
         }
     }
@@ -120,11 +134,17 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 251px;
     background-color: unset;
     border-radius: 15px;
     background-color: white;
-
+    margin-bottom: 18px;
+    &__image {
+        margin: 0;
+        height: 174px;
+    }
     & img {
+        margin: 0;
         width: 100%;
         object-fit: cover;
         height: 174px;
@@ -132,14 +152,14 @@
         border-radius: 15px 15px 0px 0px;
     }
 
-    & h3 {
+    &__title {
         font-size: 18px;
         margin: 16px 0 0 14px;
     }
 
-    & p {
+    &__text {
         font-size: 18px;
-        margin: 3px 0 0 14px;
+        margin: 3px 0 16px 14px;
     }
 
     &__footer {

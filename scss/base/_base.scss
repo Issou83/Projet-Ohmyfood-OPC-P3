@@ -5,3 +5,12 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
+footer {
+  font-family: "Shrikhand", sans-serif;
+  & ul {
+    font-family: "Roboto";
+  }
+}

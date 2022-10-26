@@ -1,137 +1,147 @@
 //Régles générals , appliquées sur toute les pages
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 18px; 
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  a {
-  text-decoration: none;
-  }
-  a:visited, a, p, h1, h2, h3 {
-      color: black;
-  }
-  p {
-      font-size: 16px;
-      margin: 0;
-  }
-//Le header et position du logo
-header {
-    display: block;
-    position: relative;
-    & figure {
-        @include centerX;
-        margin: 0px 0 0 0;
-        width: 100%;
-        padding-bottom: 13px;
-        padding-top: 23px;
-    }
-    & img {
-        width: 164px;
-    }
-    & p {
-        font-size: 17px;
-        font-weight: 500;
-    }
+  max-width: 100%;
+  margin: auto;
 }
 
-.location {
-    position: relative; 
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px;
-    background: linear-gradient(rgb(210, 210, 210) 1px, #eaeaea 5px);
+a {
+  text-decoration: none;
 }
-.fa-location-dot {
-    position: absolute;
-    margin-right: 150px;
-    top: 11px;
-    font-size: 16px;
-    padding: 5px 5px 5px 5px;
+
+a:visited,
+a,
+p,
+h1,
+h2,
+h3 {
+  color: $text-dark;
 }
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+
+//Le header et position du logo
+header {
+  display: block;
+  position: relative;
+
+  & figure {
+    @include centerX;
+    margin: 0px 0 0 0;
+    width: 100%;
+    padding-bottom: 13px;
+    padding-top: 23px;
+  }
+
+  & img {
+    width: 164px;
+  }
+
+  & p {
+    font-size: 17px;
+    font-weight: 500;
+  }
+}
+
 //fleche de retour a l'ecran d'acceuil
 .fa-arrow-left {
-    font-size: 20px;
-    position: absolute;
-    bottom: 20px;
-    left: 24px;
-  }
-  .heartcase { //Position du couer dans le pages menu
-    position: relative;
-    margin-right: 4.8%;
-    @include centerXY;
-  }
-.heart { //Coeurs pour toutes les pages
-    position: relative;
-    margin-top: 8px;
-    margin-right: 9.6%;
-    @include centerXY;
-    &-empt {
-        position: absolute;
-        font-size: 22px;
-        }
-    &-full {
-        position: absolute;
-        font-size: 22px;
-        color: transparent;
-        z-index: 1;
-        opacity: 0;
-        font-weight: bold;
-        background: $gradMini;
-        background-clip: text;
-        -webkit-background-clip: text;
-        &:hover {
-            opacity: 1;
-            animation: fill 0.4s;
-        }
-    }
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
 }
-    //Div pour rattraper la hauteur du footer uniquement dans la pages menu du restaurant La note enchantee
-    .divEmpty {
-        height: 84px;
-    }
-  //Footer et ses liens
-  .footer--height{ //hauteur du footer dans les pages menu
-    margin-top: 1350px;
-   }
-  footer {
-    width: 100%;
+
+  //Coeurs pour toutes les pages
+
+.heartcase { //Position du couer dans le pages menu
+  position: relative;
+  margin-right: 4.8%;
+  @include centerXY;
+}
+
+.heart { //Coeurs et son animation
+  position: relative;
+  margin-top: 8px;
+  margin-right: 9.6%;
+  @include centerXY;
+
+  &-empt {
     position: absolute;
-    font-family: "Shrikhand", sans-serif;
-    background-color: #353535;
-    & h3 {
-      @include content-footer;
-      font-size: 18px;
-      font-weight: unset;
-      padding: 22px 0px 5px 6.66%;
-      margin: 0;
-      font-weight: lighter;
-    }
-    & p {
-      @include content-footer;
-      font-weight: 400;
-    }
-    & i {
-      @include content-footer;
-      font-size: 11px;
-      padding: 5px 11px 0px 0px;
-    }
-    & a {
-      @include content-footer;
-      display: flex;
-      margin-bottom: 8px;
-    }
-    & ul {
-      list-style-type: none;
-      padding-bottom: 26px;
-      padding-left: 6.66%;
-      font-family: "Roboto";
-      margin: 16px 0 0px 0px;
+    font-size: 22px;
+  }
+
+  &-full {
+    position: absolute;
+    font-size: 22px;
+    color: transparent;
+    z-index: 1;
+    opacity: 0;
+    font-weight: bold;
+    background: $gradMini;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    &:hover {
+      opacity: 1;
+      animation: fill 0.4s;
     }
   }
+}
+
+//Div pour rattraper la hauteur du footer uniquement dans la pages menu du restaurant La note enchantee
+.divEmpty {
+  height: 84px;
+}
+
+//Footer et ses liens
+.footer--height {
+  //hauteur du footer dans les pages menu
+  margin-top: 1350px;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  background-color: #353535;
+
+  & h3 {
+    @include content-footer;
+    font-size: 18px;
+    font-weight: unset;
+    padding: 22px 0px 5px 6.66%;
+    margin: 0;
+    font-weight: lighter;
+  }
+
+  & p {
+    @include content-footer;
+    font-weight: 400;
+  }
+
+  & i {
+    @include content-footer;
+    font-size: 11px;
+    padding: 5px 11px 0px 0px;
+  }
+
+  & a {
+    @include content-footer;
+    margin-bottom: 8px;
+    display: flex;
+  }
+
+  & ul {
+    list-style-type: none;
+    padding-bottom: 26px;
+    padding-left: 6.66%;
+    margin: 16px 0 0px 0px;
+    
+  }
+}
+
 .fa-utensils {
-font-size: 11px;
-padding: 5px 13px 0px 2px;
+  font-size: 11px;
+  padding: 5px 13px 0px 2px;
 }
