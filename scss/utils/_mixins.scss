@@ -49,7 +49,8 @@
 }
 @mixin media-Menu {
     @media screen and (min-width: $breakpoint) {
-width: 100%;
+    width: 30%;
+    min-width: 360px;
     }
 }
 //Reorganisation de la secCards pour Mediascreen
@@ -75,6 +76,12 @@ width: 100%;
 @mixin media-footer-menu {
     @media screen and (min-width: $breakpoint) {
         margin-top: 835px;
+    }
+    
+}
+@mixin media-footer-heigth {
+    @media screen and (min-width: $breakpoint) and (max-width: $breakpoint-height) {
+        margin-top: 1200px;
     }
     
 }

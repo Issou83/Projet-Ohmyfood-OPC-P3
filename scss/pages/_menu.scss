@@ -1,3 +1,11 @@
+//fleche de retour a l'ecran d'acceuil
+.fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
+
 //Main des pages menu
 .imgResto {
   width: 100%;
@@ -28,7 +36,7 @@
     margin-right: 4.8%;
     margin-right: 4.8%;
   }
-  
+
   &__title {
     margin-top: 35px;
     margin-bottom: 15px;
@@ -40,21 +48,20 @@
 
 }
 
-
-
-.fa-circle-check {
-  font-size: 20px;
-  @include centerXY;
-  height: 100%;
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  transition: all 1s;
+//Reorganisation des Menus pour Mediascreen , cette partie ne contient que les boxMenu
+.blockMenu {
+  @include media-blockMenu;
+  flex-wrap: wrap;
 }
+
+
+
 .boxMenu {
   margin-bottom: 50px;
-@include media-Menu
+  @include media-Menu;
+
 }
+
 .box__title {
   font-size: 18px;
   font-weight: 400;
@@ -65,7 +72,8 @@
   width: 40px;
 }
 
-.card { //card des menus
+.card {
+  //card des menus
   word-wrap: break-word;
   display: flex;
   flex-direction: row;
@@ -79,8 +87,9 @@
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 1s;
-//Apparitons progressive des menus
+  transition: all 0.4s;
+
+  //Apparitons progressive des menus
   &__delay1 {
     animation: box-animation $anim1;
     animation-fill-mode: both;
@@ -119,38 +128,53 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   &__title {
     font-size: 18px;
     margin: 0px 0px 0px 4%;
     margin-bottom: 2px;
   }
+
   &__text p {
     font-size: 16px;
     margin: 0px 0px 0px 4%;
     margin-top: 3px;
   }
+
   &__valid {
     display: flex;
     align-items: flex-end;
   }
+
   &__price {
     height: 30px;
     font-size: 14px;
     font-weight: 700;
     margin: 0px 12px 0px 0px;
   }
-&__check {
+
+  &__check {
+    overflow: hidden;
+    height: 100%;
+    width: 60px;
+    background-color: #99e2d0;
+    border-radius: 0 15px 15px 0;
+    height: 100%;
+    margin-right: -60px;
+    transition: margin-right 1s;
+  }
+}
+
+.fa-circle-check {
+  font-size: 20px;
+  @include centerXY;
+  height: 100%;
+  width: 100%;
+  color: white;
   overflow: hidden;
-  height: 100%;
-  width: 60px;
-  background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  height: 100%;
-  margin-right: -60px;
-  transition: margin-right 1s;
+  transition: all 1s;
 }
-}
+
 .card__title,
 .card__text p {
 
@@ -158,19 +182,8 @@
   white-space: nowrap;
   overflow: hidden;
 }
-//Reorganisation des Menus pour Mediascreen , cette partie ne contient que les boxMenu
-.blockMenu {
-  @include media-blockMenu;
-}
-//fleche de retour a l'ecran d'acceuil
-.fa-arrow-left {
-  font-size: 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 24px;
-}
 
-  //Position du couer dans le pages menu
+//Position du coeur dans le pages menu
 .heartcase {
   position: relative;
   margin-right: 4.8%;
@@ -179,8 +192,9 @@
 }
 
 
-  //hauteur du footer dans les pages menu
+//hauteur du footer dans les pages menu
 .footer--height {
   margin-top: 1430px;
   @include media-footer-menu;
+  @include media-footer-heigth;
 }

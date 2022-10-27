@@ -537,6 +537,13 @@ footer ul {
   color: #008766;
 }
 
+.fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
+
 .imgResto {
   width: 100%;
   margin: 0;
@@ -574,16 +581,14 @@ footer ul {
   font-family: "Shrikhand";
 }
 
-.fa-circle-check {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  transition: all 1s;
+.blockMenu {
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .blockMenu {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .boxMenu {
@@ -591,7 +596,8 @@ footer ul {
 }
 @media screen and (min-width: 768px) {
   .boxMenu {
-    width: 100%;
+    width: 30%;
+    min-width: 360px;
   }
 }
 
@@ -619,7 +625,7 @@ footer ul {
   border-radius: 15px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 0.4s;
 }
 .card__delay1 {
   animation: box-animation 1s 200ms;
@@ -683,25 +689,23 @@ footer ul {
   transition: margin-right 1s;
 }
 
+.fa-circle-check {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  transition: all 1s;
+}
+
 .card__title,
 .card__text p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .blockMenu {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
-.fa-arrow-left {
-  font-size: 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 24px;
 }
 
 .heartcase {
@@ -719,6 +723,11 @@ footer ul {
 @media screen and (min-width: 768px) {
   .footer--height {
     margin-top: 835px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1079px) {
+  .footer--height {
+    margin-top: 1200px;
   }
 }
 
