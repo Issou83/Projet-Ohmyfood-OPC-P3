@@ -140,22 +140,6 @@ header p {
   font-weight: 500;
 }
 
-.fa-arrow-left {
-  font-size: 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 24px;
-}
-
-.heartcase {
-  position: relative;
-  margin-right: 4.8%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .heart {
   position: relative;
   margin-top: 8px;
@@ -202,6 +186,15 @@ footer h3 {
   margin: 0;
   font-weight: lighter;
 }
+@media screen and (min-width: 768px) {
+  footer h3 {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 footer p {
   color: white;
   font-size: 16px;
@@ -224,6 +217,15 @@ footer ul {
   padding-bottom: 26px;
   padding-left: 6.66%;
   margin: 16px 0 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .fa-utensils {
@@ -401,7 +403,6 @@ footer ul {
 }
 @media screen and (min-width: 768px) {
   .secExplor {
-    margin: 0;
     width: 50%;
   }
 }
@@ -426,12 +427,13 @@ footer ul {
 @media screen and (min-width: 768px) {
   .block1 {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
 @media screen and (min-width: 768px) {
   .secFonction {
-    margin: 0;
     width: 50%;
   }
 }
@@ -473,6 +475,12 @@ footer ul {
   padding: 56px 0 24px 5.33%;
   margin-top: unset;
   margin-bottom: unset;
+}
+@media screen and (min-width: 768px) {
+  .secCards h2 {
+    text-align: center;
+    padding: 56px 0 30px 0;
+  }
 }
 
 .cardHome {
@@ -550,21 +558,20 @@ footer ul {
   border-radius: 40px 40px 0 0;
   z-index: 2;
 }
-.menu-title {
+.menu__like {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 4.8%;
+  margin-right: 4.8%;
+}
+.menu__title {
   margin-top: 35px;
   margin-bottom: 15px;
   margin-left: 4.8%;
   font-size: 30px;
   font-weight: 500;
   font-family: "Shrikhand";
-}
-
-.title-like {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 4.8%;
-  margin-right: 4.8%;
 }
 
 .fa-circle-check {
@@ -581,6 +588,11 @@ footer ul {
 
 .boxMenu {
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .boxMenu {
+    width: 100%;
+  }
 }
 
 .box__title {
@@ -678,8 +690,36 @@ footer ul {
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .blockMenu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
+
+.heartcase {
+  position: relative;
+  margin-right: 4.8%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer--height {
-  margin-top: 1410px;
+  margin-top: 1430px;
+}
+@media screen and (min-width: 768px) {
+  .footer--height {
+    margin-top: 835px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

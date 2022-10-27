@@ -21,7 +21,15 @@
   border-radius: 40px 40px 0 0;
   z-index: 2;
 
-  &-title {
+  &__like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4.8%;
+    margin-right: 4.8%;
+  }
+  
+  &__title {
     margin-top: 35px;
     margin-bottom: 15px;
     margin-left: 4.8%;
@@ -29,15 +37,10 @@
     font-weight: 500;
     font-family: "Shrikhand";
   }
+
 }
 
-.title-like {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 4.8%;
-  margin-right: 4.8%;
-}
+
 
 .fa-circle-check {
   font-size: 20px;
@@ -50,6 +53,7 @@
 }
 .boxMenu {
   margin-bottom: 50px;
+@include media-Menu
 }
 .box__title {
   font-size: 18px;
@@ -154,10 +158,29 @@
   white-space: nowrap;
   overflow: hidden;
 }
+//Reorganisation des Menus pour Mediascreen , cette partie ne contient que les boxMenu
+.blockMenu {
+  @include media-blockMenu;
+}
+//fleche de retour a l'ecran d'acceuil
+.fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+}
 
+  //Position du couer dans le pages menu
+.heartcase {
+  position: relative;
+  margin-right: 4.8%;
+  margin-top: 20px;
+  @include centerXY;
+}
 
 
   //hauteur du footer dans les pages menu
 .footer--height {
-  margin-top: 1410px;
+  margin-top: 1430px;
+  @include media-footer-menu;
 }

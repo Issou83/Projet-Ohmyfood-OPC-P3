@@ -63,7 +63,7 @@
 
 //Section Explor
 .secExplor {
-    @include block1;
+    @include media-block1;
     @include centerXY;
     flex-direction: column;
     background-color: #f6f6f6;
@@ -92,7 +92,7 @@
 }
 //Section: Fonctionnemment
 .secFonction {
-    @include block1;
+    @include media-block1;
     &__title {
         font-size: 24px;
         font-size: 900;
@@ -133,6 +133,7 @@
         padding: 56px 0 24px 5.33%;
         margin-top: unset;
         margin-bottom: unset;
+        @include secCards-media;
     }
 }
 

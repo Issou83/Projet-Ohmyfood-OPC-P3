@@ -24,15 +24,57 @@
 @mixin grad {
     background-color: linear-gradient(176deg, #ff79da, #9356dc 78px);
 }
+
+//Reorganisation du block1 et blockMenu pour Mediascreen
 @mixin tablette-and-desktop {
     @media screen and (min-width: $breakpoint) {
-       display: flex; 
-
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
 }
-@mixin block1 {
+
+@mixin media-block1 {
     @media screen and (min-width: $breakpoint) {
- margin: 0;
- width: 50%;
+        width: 50%;
     }
+}
+
+//Reorganisation des Menus pour Mediascreen
+@mixin media-blockMenu {
+    @media screen and (min-width: $breakpoint) {
+    display: flex;
+    justify-content: space-around;
+    }
+}
+@mixin media-Menu {
+    @media screen and (min-width: $breakpoint) {
+width: 100%;
+    }
+}
+//Reorganisation de la secCards pour Mediascreen
+@mixin secCards-media {
+    @media screen and (min-width: $breakpoint) {
+        text-align: center;
+        padding: 56px 0 30px 0;
+    }
+}
+
+//Reorganisation des footer pour Mediascreen
+@mixin media-footer {
+    @media screen and (min-width: $breakpoint) {
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+//Reorganisation des footer pour Mediascreen uniquement pour les pages menu
+@mixin media-footer-menu {
+    @media screen and (min-width: $breakpoint) {
+        margin-top: 835px;
+    }
+    
 }
