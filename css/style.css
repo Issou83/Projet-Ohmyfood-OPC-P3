@@ -17,6 +17,20 @@ footer ul {
   font-family: "Roboto";
 }
 
+@keyframes bg-load {
+  0% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(1);
+  }
+  90% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(1);
+  }
+  100% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(0);
+  }
+}
 @keyframes fill {
   0% {
     transform: scale(0);
@@ -38,20 +52,6 @@ footer ul {
     opacity: 1;
   }
 }
-@keyframes bg-load {
-  0% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(100%);
-  }
-  90% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(100%);
-  }
-  100% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(0%);
-  }
-}
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(0);
@@ -70,7 +70,7 @@ footer ul {
     box-shadow: 0px 0px 1000px #9356DC;
   }
   66% {
-    transform: rotate(720deg) scale(-1.2);
+    transform: rotate(720deg) scale(-1.5);
     border-top-color: #99E2D0;
     border-bottom-color: #99E2D0;
     border-left-color: #FF79DA;
@@ -327,6 +327,7 @@ footer ul {
   height: 50px;
   border: unset;
   box-shadow: 0px 0px 10px grey;
+  box-shadow: 2px 5px 10px rgb(202, 202, 202);
   cursor: pointer;
 }
 .btn:hover {
@@ -359,7 +360,6 @@ footer ul {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  box-shadow: transparent;
   -webkit-animation: chargeur 2s ease-in-out;
   animation: chargeur 2s ease-in-out;
 }
@@ -439,7 +439,6 @@ footer ul {
 }
 .secFonction__title {
   font-size: 24px;
-  font-size: 900;
   margin: 46px 0px 18px 5.33%;
 }
 

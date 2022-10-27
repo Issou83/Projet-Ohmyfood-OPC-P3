@@ -1,3 +1,20 @@
+//loading page d'acceuil
+@keyframes bg-load {
+  0% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(1);
+  }
+
+  90% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(1);
+  }
+
+  100% {
+    background-color: rgba(192, 192, 192, 0.7);
+    transform: scale(0);
+  }
+}
 //Animations des coeurs
 @keyframes fill {
   0% {
@@ -26,24 +43,8 @@
   }
 }
 
-//loading page d'acceuil
-@keyframes bg-load {
-  0% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(100%);
-  }
 
-  90% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(100%);
-  }
-
-  100% {
-    background-color: rgba(192, 192, 192, 0.7);
-    transform: scale(0%);
-  }
-}
-
+//
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(0);
@@ -65,7 +66,7 @@
   }
 
   66% {
-    transform: rotate(720deg) scale(-1.2);
+    transform: rotate(720deg) scale(-1.5);
     border-top-color: $terColor;
     border-bottom-color: $terColor;
     border-left-color: $secColor;

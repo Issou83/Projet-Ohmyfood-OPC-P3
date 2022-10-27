@@ -67,6 +67,7 @@
     @include centerXY;
     flex-direction: column;
     background-color: #f6f6f6;
+
     & h1 {
         width: 62.5%;
         text-align: center;
@@ -85,14 +86,17 @@
 
 
 }
+
 //block qui englobe secExplor + secFonction
 .block1 {
     @include tablette-and-desktop;
     width: 100%;
 }
+
 //Section: Fonctionnemment
 .secFonction {
     @include media-block1;
+
     &__title {
         font-size: 24px;
         font-size: 900;

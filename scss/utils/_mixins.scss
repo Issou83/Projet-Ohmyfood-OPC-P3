@@ -43,16 +43,18 @@
 //Reorganisation des Menus pour Mediascreen
 @mixin media-blockMenu {
     @media screen and (min-width: $breakpoint) {
-    display: flex;
-    justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
     }
 }
+
 @mixin media-Menu {
     @media screen and (min-width: $breakpoint) {
-    width: 30%;
-    min-width: 360px;
+        width: 30%;
+        min-width: 360px;
     }
 }
+
 //Reorganisation de la secCards pour Mediascreen
 @mixin secCards-media {
     @media screen and (min-width: $breakpoint) {
@@ -77,11 +79,13 @@
     @media screen and (min-width: $breakpoint) {
         margin-top: 835px;
     }
-    
+
 }
+
+//Adaptation du footer suite au probleme d'affichage
 @mixin media-footer-heigth {
     @media screen and (min-width: $breakpoint) and (max-width: $breakpoint-height) {
         margin-top: 1200px;
     }
-    
+
 }
