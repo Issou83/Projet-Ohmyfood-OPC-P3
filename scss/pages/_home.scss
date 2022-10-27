@@ -15,8 +15,8 @@
     @include centerXY;
     margin: auto;
     border: 5px ridge transparent;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     box-shadow: transparent;
     -webkit-animation: chargeur 2s ease-in-out;
@@ -63,10 +63,10 @@
 
 //Section Explor
 .secExplor {
+    @include block1;
     @include centerXY;
     flex-direction: column;
     background-color: #f6f6f6;
-
     & h1 {
         width: 62.5%;
         text-align: center;
@@ -85,9 +85,14 @@
 
 
 }
-
+//block qui englobe secExplor + secFonction
+.block1 {
+    @include tablette-and-desktop;
+    width: 100%;
+}
 //Section: Fonctionnemment
 .secFonction {
+    @include block1;
     &__title {
         font-size: 24px;
         font-size: 900;

@@ -24,3 +24,15 @@
 @mixin grad {
     background-color: linear-gradient(176deg, #ff79da, #9356dc 78px);
 }
+@mixin tablette-and-desktop {
+    @media screen and (min-width: $breakpoint) {
+       display: flex; 
+
+    }
+}
+@mixin block1 {
+    @media screen and (min-width: $breakpoint) {
+ margin: 0;
+ width: 50%;
+    }
+}
